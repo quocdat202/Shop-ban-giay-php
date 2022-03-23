@@ -18,7 +18,7 @@
             <div class="content">
                 <?php
                     require_once 'giaodien/LeftContent.php';
-                    require_once 'giaodien/center_content.php'
+                    require_once 'giaodien/center_content.php';
                 ?>
             </div>
             <!-- <?php require_once 'giaodien/footer.php'; ?> -->
