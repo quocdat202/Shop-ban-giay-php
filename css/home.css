@@ -1,0 +1,98 @@
+*{
+    list-style: none;
+}
+.center-pg{
+    background:white;
+}
+.center-page{
+    display:flex;
+    width: 73%;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+.logo-nav{
+    width: 30%;
+}
+.logo-nav img{
+    width: 40%;
+}
+.menu-nav{
+    width:70%;
+}
+
+.navi-item img{
+    width: 75%;
+}
+.navi-item ul{
+    display: flex;
+    margin-bottom: 0;
+}
+.navi-item ul li{
+    padding:10px 10px 0 10px;
+    width:13%;
+    margin-left:20px;
+}
+.navi-item ul li:hover{
+    cursor: pointer;
+}
+.img-nav{
+    height:50%;
+}
+.ic-cart{
+    width:7% !important;
+    margin-top: 25px;
+}
+.nav-search{
+    display:flex;
+}
+.form-sr{
+    width:60%;
+    display:flex;
+    padding-left: 70px;
+}
+.ip-search{
+    padding: 10px;
+    height:40px;
+    width:90%;
+    position: relative;
+    border-right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    /* border-color: rgb(231, 231, 231); */
+}
+.btn-search{
+    width: 10%;
+    height:40px;
+    border: 2px solid ;
+    /* border-color: rgb(231, 231, 231); */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    /* margin-left: -5px; */
+    /* position: absolute; */
+}
+.phone-icon{
+    padding: 12px 12px 15px;
+    background-color: #eee;
+    border-radius: 100%;
+}
+.btn-search img{
+    width: 100%;
+}
+.phone-order{
+    display:flex;
+    width: 30%;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.phone {
+    padding-left: 5px;
+    height:40px;
+    display:flex;
+}
+.phone strong,p{
+    line-height:40px;
+}

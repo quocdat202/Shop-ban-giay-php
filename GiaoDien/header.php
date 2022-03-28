@@ -1,25 +1,96 @@
 <?php 
-echo '<div class="header">
-        <div class="left-header">
-            <!-- <img src="test.jpg" alt="test"> -->
-            <div class="right-header-bottom">
-                <a href="index.php?id=10&act=f" >Đăng nhập</a>
-                <a >Đăng ký</a>
-                <a href="index.php?id=11&act=f">Tổng hai số</a>
+echo '<section class="ftco-section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light menu-top" id="ftco-navbar">
+            <div class="container page">
+                <a class="navbar-brand nav-home" href="index.html">Sneaker</a>
+                <div class="social-media order-lg-last">
+                    <p class="mb-0 d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                    </p>
             </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+              </button>
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto mr-md-3">
+                    <li class="nav-item active"><a href="#" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Giới thiệu</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Bảo hành</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Bài viết</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">Liên hệ</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
-        <!-- <div class="right-header">
-            <p>Ten Cong ty</p>
-        </div> -->
-        <div class="top-header">
-            <ul>
-                <li class="li1"><a href="">Trang chủ<a></li>
-                <li>Giới thiệu</li>
-                <li>Thông tin tuyển sinh</li>
-                <li>Thông tin đào tạo</li>
-                <li>Liên hệ</li>
-            </ul>
+      </section>
+      <div class="container center-pg">
+      <div class="center-page">
+      <div class="logo-nav">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+      <div class="menu-nav">
+        <div class="navi-item">
+          <ul>
+            <li>
+              <div class="img-nav">
+                <img src="images/sale.png" />
+              </div>
+              <p>Siêu Sale</p>
+            </li>
+            <li>
+              <div class="img-nav">
+                <img src="images/nike.png" />
+              </div>
+              <p>Nike</p>
+            </li>
+            <li>
+              <div class="img-nav">
+                <img src="images/Adidas.png" />
+              </div>
+              <p>Adidas</p>
+            </li>
+            <li>
+              <div class="img-nav">
+                <img src="images/vans.png" />
+              </div>
+              <p>Vans</p>
+            </li>
+            <li>
+              <div class="img-nav">
+                <img src="images/Converse.png" />
+              </div>
+              <p>Converse</p>
+            </li>
+            <li>
+              <div class="img-nav">
+                <img src="images/Balenciaga.png" />
+              </div>
+              <p>Balenciaga</p>
+            </li>
+            <li class="ic-cart">
+              <img src="images/cart.png" />
+            </li>
+          </ul>
         </div>
-    </div>';
-    
+        <div class="nav-search">
+          <form class="form-sr">
+            <input class="ip-search" placeholder="Bạn muốn tìm gì..." />
+            <button class="btn btn-search" ><img src="images/search.png" /></button>
+          </form>
+          <div class="phone-order">
+            <i class="fa fa-phone phone-icon"></i>
+            <div class="phone">
+              <strong>ĐẶT HÀNG NHANH: </strong>
+              <p>1900633349</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>';
 ?>
