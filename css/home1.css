@@ -11,41 +11,46 @@
     padding: 20px 0 0 0;
 }
 .logo-nav{
-    width: 30%;
+    width: 20%;
 }
 .logo-nav img{
-    width: 40%;
+    width: 50%;
 }
 .menu-nav{
-    width:70%;
+    width:80%;
 }
 
 .navi-item img{
-    width: 75%;
+    width: 100%;
 }
 .navi-item ul{
     display: flex;
     margin-bottom: 0;
 }
 .navi-item ul li{
-    padding:10px 10px 0 10px;
-    width:13%;
-    margin-left:20px;
+    width:20%;
 }
+.navi-item ul li p{
+    text-align: center;
+    color: black;
+}
+
 .navi-item ul li:hover{
     cursor: pointer;
 }
-.navi-item ul li p a{
-    color:black !important;
+.navi-item ul li:hover p{
+    color: #FC7FB2;
 }
 .center-pg{
     padding-bottom: 20px !important;
 }
 .img-nav{
+    margin: 0 auto;
+    width: 39%;
     height:50%;
 }
-.ic-cart{
-    width:7% !important;
+.ic-cart img{
+    width:25% !important;
     margin-top: 25px;
 }
 .nav-search{
