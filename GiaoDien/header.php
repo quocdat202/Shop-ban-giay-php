@@ -1,5 +1,6 @@
 <?php 
-echo '<section class="ftco-section">
+echo '
+      <section class="ftco-section">
         <div class="container">
             <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light menu-top" id="ftco-navbar">
             <div class="container page">
@@ -17,7 +18,7 @@ echo '<section class="ftco-section">
               </button>
               <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto mr-md-3">
-                    <li class="nav-item active"><a href="#" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item active"><a href="index.php" class="nav-link">Trang chủ</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Giới thiệu</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Bảo hành</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Bài viết</a></li>
@@ -37,43 +38,57 @@ echo '<section class="ftco-section">
         <div class="navi-item">
           <ul>
             <li>
-              <div class="img-nav">
-                <img src="images/sale.png" />
-              </div>
-              <p>Siêu Sale</p>
+              <a href="#">
+                <div class="img-nav">
+                  <img src="images/sale.png" />
+                </div>
+                <p>Siêu Sale</p>
+              </a>
             </li>
             <li>
-              <div class="img-nav">
-                <img src="images/nike.png" />
-              </div>
-              <p>Nike</p>
+              <a href="#">
+                <div class="img-nav">
+                  <img src="images/nike.png" />
+                </div>
+                <p>Nike</p>
+              </a>
             </li>
             <li>
-              <div class="img-nav">
-                <img src="images/Adidas.png" />
-              </div>
-              <p>Adidas</p>
+              <a href="#">
+                <div class="img-nav">
+                  <img src="images/Adidas.png" />
+                </div>
+                <p>Adidas</p>
+              </a>
             </li>
             <li>
-              <div class="img-nav">
-                <img src="images/vans.png" />
-              </div>
-              <p>Vans</p>
+              <a href="#">
+                <div class="img-nav">
+                  <img src="images/vans.png" />
+                </div>
+                <p>Vans</p>
+              </a>
             </li>
             <li>
-              <div class="img-nav">
-                <img src="images/Converse.png" />
-              </div>
-              <p>Converse</p>
+              <a href="#">
+                <div class="img-nav">
+                  <img src="images/Converse.png" />
+                </div>
+                <p>Converse</p>
+              </a>
             </li>
             <li>
-              <div class="img-nav">
-                <img src="images/Balenciaga.png" />
-              </div>
-              <p>Balenciaga</p>
+              <a href="#">
+                <div class="img-nav">
+                  <img src="images/Balenciaga.png" />
+                </div>
+                <p>Balenciaga</p>
+              </a>
             </li>
             <li class="ic-cart">
-              <img src="images/cart.png" />
+              <a href="#">
+                <img src="images/cart.png" />
+              </a>
             </li>
           </ul>
         </div>
@@ -92,5 +107,16 @@ echo '<section class="ftco-section">
         </div>
       </div>
       </div>
-      </div>';
+      </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/cover-website.png" /></div>
+        <div class="swiper-slide"><img src="images/slide2.png" /></div>
+        <div class="swiper-slide"><img src="images/slide3.png" /></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+      ';
 ?>

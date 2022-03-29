@@ -133,7 +133,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #007bff;
+  /* color: #007bff; */
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -8152,7 +8152,8 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #fc7fb2; }
+  /* color: #fc7fb2;  */
+}
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;

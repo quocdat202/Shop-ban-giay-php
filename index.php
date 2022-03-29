@@ -9,9 +9,13 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 	
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/home.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="css/home1.css">
     <title>Shop giày</title>
 </head>
 
@@ -32,5 +36,6 @@
         </div>
     </div>
 </body>
-<script src="test.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="store.js"></script>
 </html>
