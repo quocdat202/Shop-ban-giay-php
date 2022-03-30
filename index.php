@@ -15,7 +15,7 @@
     />
 	
 	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link type="text/css" rel="stylesheet" href="css/home1.css">
+	<link type="text/css" rel="stylesheet" href="css/home.css">
     <title>Shop giày</title>
 </head>
 
@@ -27,7 +27,7 @@
             ?>
             <div class="content">
                 <?php
-                    require_once 'giaodien/LeftContent.php';
+                    // require_once 'giaodien/LeftContent.php';
                     require_once 'giaodien/center_content.php';
                 ?>
             </div>

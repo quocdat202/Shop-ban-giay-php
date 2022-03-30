@@ -157,4 +157,29 @@ html,
         margin-left: auto;
         margin-right: auto;
       }
-  
+      .content-center{
+        padding: 20px 0 !important;
+        background-color:white;
+    }
+    .txt-content{
+        width: 100%;
+        text-align: center;
+        font-size:30px;
+        font-weight:bold;
+    }
+    .product-image{
+        width: 25%;
+    }
+    .product-image img{
+        width: 100%;
+    }
+    .product-name p, .product-price p{
+      font-size:14px;
+      font-weight:400;
+      font-family: Roboto, serif;
+      margin: 0;
+      height:20px;
+    }
+    .product-price p{
+      color:red;
+    }

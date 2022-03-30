@@ -4,21 +4,22 @@ class DataProvider
 	
 	public static function executeQuery($sql)
 	{
-		require_once ('ketnoi.php');
+		require ('ketnoi.php');
 
 		if (($connection = mysqli_connect($host,$user,$pass,$db)))
-			echo"ket noi thanh cong";
+			echo"<script> console.log('Kết nối thành công')</script>";
 		else 
-			echo "Khong the ket noi";
+			echo"<script> console.log('Không thể kết nối')</script>";
 
 		if (!(mysqli_query($connection,"set names 'utf8'")))
-			echo "Khong the set utf8";
+			echo"<script> console.log('Không thể set names 'utf8'')</script>";
 
 		if (!($result = mysqli_query($connection,$sql)))
-			echo "Khong the ket noi 3"; 
-
+			echo"<script> console.log('Không thể kết nối 3')</script>";
+ 
 		if (!(mysqli_close($connection)))
-			echo "Khong the ket noi 4";
+			echo"<script> console.log('Không thể kết nối 4')</script>";
+
 		return $result;
 	}
 }

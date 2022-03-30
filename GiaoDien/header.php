@@ -4,7 +4,7 @@ echo '
         <div class="container">
             <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light menu-top" id="ftco-navbar">
             <div class="container page">
-                <a class="navbar-brand nav-home" href="index.html">Sneaker</a>
+                <a class="navbar-brand nav-home" href="index.php">Sneaker</a>
                 <div class="social-media order-lg-last">
                     <p class="mb-0 d-flex">
                         <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
