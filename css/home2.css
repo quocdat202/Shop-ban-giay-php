@@ -167,8 +167,12 @@ html,
         font-size:30px;
         font-weight:bold;
     }
+    .product{
+        display: flex;
+        flex-direction: column;
+    }
     .product-image{
-        width: 25%;
+        width: 100%;
     }
     .product-image img{
         width: 100%;
@@ -183,3 +187,13 @@ html,
     .product-price p{
       color:red;
     }
+    .product-item{
+        width: 25%;
+        padding: 10px;
+    }
+    .item-pro{
+        display: flex;
+    }
+    /* .product-nike,.product-vans{
+        display:flex;
+    } */
