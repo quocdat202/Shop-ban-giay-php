@@ -8,15 +8,17 @@ $result = DataProvider::executeQuery($sql);
         {
             echo '
                         <div class="product-item">
-                            <div class="product-image">
-                                <img src="images/'.$row['hinhanh'].'" />
-                            </div>
-                            <div class="product-name">
-                                <p>'.$row['ten'].'</p>
-                            </div>
-                            <div class="product-price">
-                                <p>'.currency_format($row['gia']).'</p>
-                            </div>
+                            <a href="index.php?id='.$row['idSP'].'&act=detailproduct">
+                                <div class="product-image">
+                                    <img src="images/'.$row['hinhanh'].'" />
+                                </div>
+                                <div class="product-name">
+                                    <p>'.$row['ten'].'</p>
+                                </div>
+                                <div class="product-price">
+                                    <p>'.currency_format($row['gia']).'</p>
+                                </div>
+                            </a>
                         </div>
                 ';
         }

@@ -23,12 +23,25 @@
     <div class="page-ctn">
         <div class="">
             <?php 
-                require_once 'giaodien/header.php'
+                require_once 'giaodien/header.php';
             ?>
             <div class="content">
                 <?php
                     // require_once 'giaodien/LeftContent.php';
-                    require_once 'giaodien/center_content.php';
+                    if (isset($_GET['act'])){
+                        if ($_GET['act'] == "detailproduct")
+                            require_once 'giaodien/detailproduct.php';
+                    }
+                    else
+                        require_once 'giaodien/banner.php';
+                ?>
+                <?php 
+                    if (isset($_GET['act'])){
+                        if ($_GET['act'] == "detailproduct")
+                            require_once 'giaodien/detailproduct.php';
+                    }
+                    else
+                        require_once 'giaodien/center_content.php';
                 ?>
             </div>
             <?php require_once 'giaodien/footer.php'; ?>
