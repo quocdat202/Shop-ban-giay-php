@@ -15,12 +15,12 @@
     />
 	
 	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link type="text/css" rel="stylesheet" href="css/home2.css">
+	<link type="text/css" rel="stylesheet" href="css/home1.css">
     <title>Shop giày</title>
 </head>
 
 <body>
-    <div>
+    <div class="page-ctn">
         <div class="">
             <?php 
                 require_once 'giaodien/header.php'
@@ -31,8 +31,7 @@
                     require_once 'giaodien/center_content.php';
                 ?>
             </div>
-            <!-- <?php require_once 'giaodien/footer.php'; ?> -->
-            <?php require_once 'data.php'; ?>
+            <?php require_once 'giaodien/footer.php'; ?>
         </div>
     </div>
 </body>

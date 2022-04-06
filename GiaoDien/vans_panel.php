@@ -1,7 +1,7 @@
 <?php 
 include_once 'DataProvider.php';
 include_once 'format_price.php';
-$sql = "SELECT * FROM sanpham WHERE idloai=2";
+$sql = "SELECT * FROM sanpham WHERE idloai=2 LIMIT 4";
 $result = DataProvider::executeQuery($sql);
 
         while($row = mysqli_fetch_array($result))

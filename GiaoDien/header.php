@@ -32,7 +32,9 @@ echo '
       <div class="container center-pg">
       <div class="center-page">
       <div class="logo-nav">
-        <img src="images/logo.png" alt="logo" />
+        <a href="index.php">
+          <img src="images/logo.png" alt="logo" />
+        </a>
       </div>
       <div class="menu-nav">
         <div class="navi-item">
