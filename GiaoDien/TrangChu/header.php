@@ -102,8 +102,8 @@ echo '
           <div class="phone-order">
             <i class="fa fa-phone phone-icon"></i>
             <div class="phone">
-              <strong>ĐẶT HÀNG NHANH: </strong>
-              <p>1900633349</p>
+              <strong class="phones">ĐẶT HÀNG NHANH: </strong>
+              <p class="phones">1900633349</p>
             </div>
           </div>
         </div>

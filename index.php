@@ -23,7 +23,7 @@
     <div class="page-ctn">
         <div class="">
             <?php 
-                require_once 'giaodien/header.php';
+                require_once 'giaodien/Trangchu/header.php';
             ?>
             <div class="content">
                 <?php
@@ -33,7 +33,7 @@
                             require_once 'giaodien/detailproduct.php';
                     }
                     else
-                        require_once 'giaodien/banner.php';
+                        require_once 'giaodien/Trangchu/banner.php';
                 ?>
                 <?php 
                     if (isset($_GET['act'])){
@@ -41,10 +41,10 @@
                             require_once 'giaodien/detailproduct.php';
                     }
                     else
-                        require_once 'giaodien/center_content.php';
+                        require_once 'giaodien/Trangchu/center_content.php';
                 ?>
             </div>
-            <?php require_once 'giaodien/footer.php'; ?>
+            <?php require_once 'giaodien/Trangchu/footer.php'; ?>
         </div>
     </div>
 </body>

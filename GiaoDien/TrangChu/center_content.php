@@ -1,6 +1,6 @@
 <?php 
 include_once 'DataProvider.php';
-include_once 'format_price.php';
+include_once 'GiaoDien/format_price.php';
 $sql = "SELECT * FROM sanpham WHERE idloai=1";
 $result = DataProvider::executeQuery($sql);
 
@@ -14,7 +14,7 @@ $result = DataProvider::executeQuery($sql);
                                     <p>Nike</p>
                                 </div>';
                             echo '<div class="item-pro">';
-                                    include_once 'nike_panel.php';
+                                    include_once 'GiaoDien/SanPham/nike_panel.php';
                             echo '</div>';
                             echo '<div class="show-product">
                                     <div class="show-pro">
@@ -29,7 +29,7 @@ $result = DataProvider::executeQuery($sql);
                                     <p>Vans</p>
                                 </div>';
                             echo '<div class="item-pro">';
-                                    include_once 'vans_panel.php';
+                                    include_once 'GiaoDien/SanPham/vans_panel.php';
                             echo '</div>';
                             echo '<div class="show-product">
                                     <div class="show-pro">
@@ -44,7 +44,7 @@ $result = DataProvider::executeQuery($sql);
                                     <p>Adidas</p>
                                 </div>';
                             echo '<div class="item-pro">';
-                                    include_once 'adidas_panel.php';
+                                    include_once 'GiaoDien/SanPham/adidas_panel.php';
                             echo '</div>';
                             echo '<div class="show-product">
                                     <div class="show-pro">
@@ -59,7 +59,7 @@ $result = DataProvider::executeQuery($sql);
                                     <p>Converse</p>
                                 </div>';
                             echo '<div class="item-pro">';
-                                    include_once 'converse_panel.php';
+                                    include_once 'GiaoDien/SanPham/converse_panel.php';
                             echo '</div>';
                             echo '<div class="show-product">
                                     <div class="show-pro">
@@ -74,7 +74,7 @@ $result = DataProvider::executeQuery($sql);
                                     <p>Balenciaga</p>
                                 </div>';
                             echo '<div class="item-pro">';
-                                    include_once 'balenciaga_panel.php';
+                                    include_once 'GiaoDien/SanPham/balenciaga_panel.php';
                             echo '</div>';
                             echo '<div class="show-product">
                                     <div class="show-pro">
