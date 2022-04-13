@@ -49,24 +49,38 @@
                     <tbody className="fn-ttif">
                         <tr>
                             <th className="row tt-if">Mã sản phẩm</th>
-                            <td></td>
+                            <td>
+                                '.$row['idSP'].'
+                            </td>
                         </tr>
                         <tr>
                             <th className="row">Kiểu dáng</th>
-                            <td>{detail.baohanh}&nbsp;năm</td>
+                            <td>
+                                '.$row['kieudang'].'
+                            </td>
                         </tr>
                         <tr>
                             <th className="row">Màu sắc</th>
-                            <td>{detail.mau}</td>
+                            <td>
+                                '.$row['mausac'].'
+                            </td>
                         </tr>
                         <tr>
                             <th className="row">Chât liệu</th>
-                            <td>{detail.id}</td>
+                            <td>
+                                '.$row['chatlieu'].'
+                            </td>
                         </tr>
                         <tr>
-                            <th className="row">Kích cỡ</th>
+                            <th className="row">Số lần mua</th>
                             <td>
-                                {detail.keyboardDetail && detail.keyboardDetail.ketnoi}
+                                '.$row['solanmua'].'
+                            </td>
+                        </tr>
+                        <tr>
+                            <th className="row">Ngày phát hành</th>
+                            <td>
+                                '.$row['ngayphathanh'].'
                             </td>
                         </tr>
                     </tbody>
@@ -78,12 +92,7 @@
                 </div>
                 <div class="detail">
                     <div class="detail-product">
-                        sdsadsadasdasdasasfasfasfasfasfasfasfasfasfasfasà
-                        assafasddqwrdsfiodsljf fjpsd;fafsdf
-                        sadasdfgdsghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+                        '.$row['mota'].'
                     </div>
                     <div class="detail-img">
                         <img src="images/'.$row['hinhanh'].'">

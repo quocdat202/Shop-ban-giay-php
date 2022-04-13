@@ -22,7 +22,8 @@ echo '
                     <li class="nav-item"><a href="#" class="nav-link">Giới thiệu</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Bảo hành</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Bài viết</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Liên hệ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Liên hệ</a></li>
+                  <li class="nav-item"><a href="GiaoDien/login.php" class="nav-link">Đăng nhập</a></li>
                 </ul>
               </div>
             </div>
