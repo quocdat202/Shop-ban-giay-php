@@ -28,14 +28,18 @@
                 require_once 'giaodien/Trangchu/header.php';
             ?>
             <div class="content">
-                <?php
+            <?php
                     // require_once 'giaodien/LeftContent.php';
-                    if (isset($_GET['act'])){
-                        if ($_GET['act'] == "detailproduct")
-                            require_once 'giaodien/detailproduct.php';
+                    // if (isset($_GET['act'])){
+                    //     if ($_GET['act'] == "detailproduct")
+                    //         require_once 'giaodien/detailproduct.php';
+                    // }
+                     if(isset($_GET['act'])){
+                        if ($_GET['act'] == "XemSP")
+                        require_once 'giaodien/TrangChu/center_content.php';
                     }
-                    else
-                        require_once 'giaodien/Trangchu/banner.php';
+                    else if(!isset($_GET['act']))
+                    require_once 'giaodien/TrangChu/banner.php';
                 ?>
                 <?php 
                     if (isset($_GET['act'])){
@@ -43,7 +47,7 @@
                             require_once 'giaodien/detailproduct.php';
                     }
                     else
-                        require_once 'giaodien/Trangchu/center_content.php';
+                        require_once 'giaodien/TrangChu/center_content.php';
                 ?>
             </div>
             <?php require_once 'giaodien/Trangchu/footer.php';             
