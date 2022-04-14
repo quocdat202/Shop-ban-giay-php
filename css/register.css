@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.register-container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin-bottom: 80px;
+}
+
+.register-title {
+    font-size: 36px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.register-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 180px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reg-input-box {
+    width: calc(50% - 20px);
+    margin-bottom: 15px;
+
+}
+
+.reg-input-box input {
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 6px;
+    font-size: 16px;
+    outline: none;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.reg-input-box .details {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.reg-input-box input:focus,
+.reg-input-box input:valid {
+    border-color: #9b59b6;
+}
+
+form .register-button input {
+    cursor: pointer;
+    height: 56px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .register-button input:hover {
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+.register-bottom-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.register-bottom-text .reg-text1 {
+    margin-right: 8px;
+    font-size: 18px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.register-bottom-text .reg-text2 {
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}
