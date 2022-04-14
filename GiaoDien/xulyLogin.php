@@ -14,9 +14,13 @@ session_start();
             }
         }
         else
+            header('location:login.php');
             echo'
                 <script>
-                    alert("Sai tên đăng nhập hoặc mật khẩu");
+                    function thongbao(){
+                        alert("Sai tên đăng nhập hoặc mật khẩu");
+                    }
+                    setTimeout(thongbao,3000);
                 </script>
             ';
     
