@@ -237,6 +237,7 @@ body {
 
 .item-pro {
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* .product-nike,.product-vans{
