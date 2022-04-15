@@ -16,7 +16,7 @@
     />
 	
 	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link type="text/css" rel="stylesheet" href="css/home2.css">
+	<link type="text/css" rel="stylesheet" href="css/home.css">
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 
     <title>Shop giày</title>
