@@ -37,7 +37,7 @@ $result = DataProvider::executeQuery($sql);
             echo '</div>';
             echo '<div class="show-product">
                     <div class="show-pro">
-                        <a href="index.php?idNameSP=Vans&act=XemSP">Xem tất cả sản phẩm => </a>
+                        <a href="index.php?idNameSP=Vans&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
                     </div>
                 </div>
                 ';
@@ -91,11 +91,15 @@ $result = DataProvider::executeQuery($sql);
     echo'</div>';
     echo '</div>
     </div>';
-    }
+    }   
 
     
         else if(isset($_GET['act']) && isset($_GET['idNameSP']))
-            {   
+        {   $sql="SELECT * FROM sanpham WHERE idloai=2";
+            $result = DataProvider::executeQuery($sql);
+            $soSP = 4;
+            $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
+            $vitri = ($_GET['page']-1)*$soSP;
                 echo '<div class="product-nike pro-it">
                 <div class="txt-content">
                     <p>'.$_GET['idNameSP'].'</p>
@@ -121,16 +125,13 @@ $result = DataProvider::executeQuery($sql);
                 </div>
                 ';
         echo '</div>';
+        echo'<div class="ProductPage">
+        <div class="item-page"';
+        for($i=0;$i<=$totalPage;$i++){
+            echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'"><button>'.$i.'</button></a>';
+        }
+        echo'</div>
+        </div>'; 
                                     }
                                     
                                     ?>
-                                    <!-- if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Nike')
-                                        include_once 'GiaoDien/SanPham/nike_panel.php';
-                                    else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Vans')
-                                        include_once 'GiaoDien/SanPham/vans_panel.php';
-                                    else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Adidas')
-                                        include_once 'GiaoDien/SanPham/adidas_panel.php';
-                                    else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Converse')
-                                        include_once 'GiaoDien/SanPham/converse_panel.php';
-                                    else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Balenciaga')
-                                        include_once 'GiaoDien/SanPham/balenciaga_panel.php'; -->

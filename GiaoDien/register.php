@@ -4,7 +4,7 @@
     <div class="register-container">
         <div class="register-title">Registration</div>
         <div id="note"></div>
-        <form action="" onsubmit="return check_register();">
+        <form action="XuLy/XuLyRegister.php" onsubmit="return check_register();">
             <div class="user-details">
                 <div class="reg-input-box">
                     <span class="details">Họ và tên</span>

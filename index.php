@@ -15,8 +15,8 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 	
-	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link type="text/css" rel="stylesheet" href="css/home1.css">
+	<link type="text/css" rel="stylesheet" href="css/style1.css">
+	<link type="text/css" rel="stylesheet" href="css/home.css">
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 
     <title>Shop giày</title>
