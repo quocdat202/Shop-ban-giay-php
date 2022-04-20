@@ -9,7 +9,7 @@ session_start();
             $_SESSION['user'] = $_GET['tendangnhap'];
             while($row = mysqli_fetch_array($result))
             {
-                if($row['idQuyen'] == 3)
+                if($row['idQuyen'] == 2)
                     header('location:../index.php');
             }
         }
