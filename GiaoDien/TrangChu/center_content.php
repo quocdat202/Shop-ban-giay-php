@@ -125,13 +125,11 @@ $result = DataProvider::executeQuery($sql);
                 </div>
                 ';
         echo '</div>';
-        echo'<div class="ProductPage">
-        <div class="item-page"';
-        for($i=0;$i<=$totalPage;$i++){
-            echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'"><button>'.$i.'</button></a>';
+        echo'<div class="ProductPage">';
+        for($i=1;$i<=$totalPage;$i++){
+            echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'">'.$i.'</a>';
         }
-        echo'</div>
-        </div>'; 
+        echo'</div>';
                                     }
                                     
                                     ?>
