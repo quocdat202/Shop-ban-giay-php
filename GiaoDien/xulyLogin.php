@@ -9,8 +9,10 @@ session_start();
             $_SESSION['user'] = $_GET['tendangnhap'];
             while($row = mysqli_fetch_array($result))
             {
-                if($row['idQuyen'] == 2)
+                if($row['idQuyen'] == 3)
                     header('location:../index.php');
+                else if($row['idQuyen'] == 2)
+                    header('location:../admin/template/index.html');
             }
         }
         else
