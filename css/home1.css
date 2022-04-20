@@ -431,6 +431,7 @@ body {
 .btn-buy {
   width: 100%;
   line-height: 35px;
+  margin-bottom: 7px;
 }
 
 .info-general {

@@ -89,7 +89,7 @@ echo '
               </a>
             </li>
             <li class="ic-cart">
-              <a href="#">
+              <a href="index.php?act=cart">
                 <img src="images/cart.png" />
               </a>
             </li>

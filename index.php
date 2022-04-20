@@ -16,7 +16,7 @@
     />
 	
 	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link type="text/css" rel="stylesheet" href="css/home.css">
+	<link type="text/css" rel="stylesheet" href="css/home1.css">
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 
     <title>Shop giày</title>
@@ -46,8 +46,10 @@
                     if (isset($_GET['act'])){
                         if ($_GET['act'] == "detailproduct")
                             require_once 'giaodien/detailproduct.php';
+                        else if($_GET['act']== "cart")
+                            require_once 'giaodien/giohang.php';
                     }
-                    else
+                    else 
                         require_once 'giaodien/TrangChu/center_content.php';
                 ?>
             </div>
