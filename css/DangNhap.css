@@ -1,4 +1,20 @@
-.login {
+/* .container {
+    width: 80%;
+    border: black solid 1px;
+}
+
+h2 {
+    text-align: center;
+    color: red;
+    font-size: 35px;
+} */
+.content {
+    color: red;
+}
+
+
+
+/* .login {
     width: 382px;
     overflow: hidden;
     margin: auto;
@@ -11,7 +27,7 @@
 
 h2 {
     text-align: center;
-    color: #277582;
+    color: red;
     padding: 20px;
 }
 
@@ -50,5 +66,5 @@ label {
 
 span {
     color: white;
-    font-size: 17px;
-}
+    font-size: 16px;
+} */
