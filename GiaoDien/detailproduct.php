@@ -30,6 +30,7 @@
                         </div>
                         <div class="ct-right-btn">
                             <button type="button" class="btn btn-dark btn-buy">Mua ngay</button>
+                            <button type="button" class="btn btn-outline-dark btn-buy">Thêm vào giỏ hàng</button>
                         </div>
                         <p class="info-general">MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</p>
                         <p class="info-general">ĐỔI TRẢ MIỄN PHÍ</p>
