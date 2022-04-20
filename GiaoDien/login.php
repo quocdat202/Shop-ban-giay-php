@@ -15,7 +15,7 @@
                 <div class="form-group">
                     <label><b>Password</b></label><span class="content">(*)</span>    
                     <input type="Password" name="matkhau" class="form-control" placeholder="Password">  
-                </div>       
+                </div>      
                 <button type="" class="btn btn-primary w-100"> Đăng nhập </button>      
                 <div class="form-group">
                     <span>Remember me</span> 
@@ -24,5 +24,5 @@
                 </div>   
             </form>     
         </div>  
-</div>  
+</div>
 

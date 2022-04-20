@@ -53,8 +53,11 @@
                         require_once 'giaodien/TrangChu/center_content.php';
                 ?>
             </div>
-            <?php require_once 'giaodien/Trangchu/footer.php';             
+            <?php require_once 'giaodien/Trangchu/footer.php';  
+                    echo $_SESSION['user'];
+                    
             ?>
+            
         </div>
 
 
