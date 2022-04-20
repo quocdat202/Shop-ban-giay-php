@@ -12,7 +12,7 @@ session_start();
                 if($row['idQuyen'] == 3)
                     header('location:../index.php');
                 else if($row['idQuyen'] == 2)
-                    header('location:../admin/index.html');
+                    header('location:../ad/index.html');
             }
         }
         else
