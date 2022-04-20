@@ -11,8 +11,8 @@ session_start();
             {
                 if($row['idQuyen'] == 3)
                     header('location:../index.php');
-                else if($row['idQuyen'] == 2)
-                    header('location:../ad/index.html');
+                else if($row['idQuyen'] == 1)
+                    header('location:../ad/index.php');
             }
         }
         else

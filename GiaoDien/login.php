@@ -1,28 +1,29 @@
-<link type="text/css" rel="stylesheet" href="../css/DangNhap.css">
+<link type="text/css" rel="stylesheet" href="../css/DangNhap1.css">
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
-<div class="container jumbotron bg-warning">
-    <h2 class="text-center text-danger">Login Page</h2><br>    
-        <div class="login">    
-            <form id="login" method="get" action="xulyLogin.php">  
-                <div class="form-group">
-                    <label><b>User Name</b></label><span class="content">(*)</span>
-                    <input type="text" name="tendangnhap" class="form-control" placeholder="Username">    
-                </div>  
-                
-                <div class="form-group">
-                    <label><b>Password</b></label><span class="content">(*)</span>    
-                    <input type="Password" name="matkhau" class="form-control" placeholder="Password">  
-                </div>      
-                <button type="" class="btn btn-primary w-100"> Đăng nhập </button>      
-                <div class="form-group">
-                    <span>Remember me</span> 
-                    <input type="checkbox" id="check"> 
-                    Bạn chưa có tài khoản? Hãy chọn <a href="register.php">Đăng Ký</a>         
-                </div>   
-            </form>     
-        </div>  
-</div>
+<body>
+    <header>
+        <h1>Đăng nhập</h1>
+    </header>
+    <main>
+        <form id="login_form" class="form_class" action="xulyLogin.php" >
+            <div class="form_div">
+                <label>Login:</label>
+                <input class="field_class" name="tendangnhap" type="text" placeholder="Tên đăng nhập" autofocus>
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="matkhau" type="password" placeholder="Mật khẩu">
+                <button class="submit_class" type="submit" form="login_form" >Đăng nhập</button>
+            </div>
+            <div class="info_div">
+                <p>Chưa có tài khoản: <a href="register.php">Đăng ký</a></p>
+            </div>
+        </form>
+    </main>
+    <footer>
+    Copyright © 2012. Designed by
+        <a href="#"> Team SGU</a>. All rights reseved
+    </footer>
+</body>
 
