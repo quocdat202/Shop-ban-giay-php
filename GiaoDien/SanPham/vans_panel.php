@@ -5,7 +5,7 @@ include_once 'GiaoDien/format_price.php';
 if(!isset($_GET['act']) && !isset($_GET['idNameSP']))
     $sql2 = "SELECT * FROM sanpham WHERE idloai=2 LIMIT 4";
 else if($_GET['act']=="XemSP" && $_GET['idNameSP']=="Vans" )
-    $sql2="SELECT * FROM sanpham WHERE idloai=2 LIMIT ".$vitri.",".$soSP;
+    $sql2 = "SELECT * FROM sanpham WHERE idloai=2 LIMIT ".$vitri.",".$soSP;
     
 $result2 = DataProvider::executeQuery($sql2);
 

@@ -1,8 +1,6 @@
 <?php 
 include_once 'DataProvider.php';
 include_once 'GiaoDien/format_price.php';
-$sql = "SELECT * FROM sanpham WHERE idloai=1";
-$result = DataProvider::executeQuery($sql);
 
     echo   '
             <div class="content-center container">
@@ -20,7 +18,7 @@ $result = DataProvider::executeQuery($sql);
             echo '</div>';
             echo '<div class="show-product">
                     <div class="show-pro">
-                        <a href="index.php?idNameSP=Nike&act=XemSP">
+                        <a href="index.php?idNameSP=Nike&act=XemSP&page=1" >
                         Xem tất cả sản phẩm => 
                         </a>
                     </div>
@@ -52,7 +50,7 @@ $result = DataProvider::executeQuery($sql);
             echo '</div>';
             echo '<div class="show-product">
                     <div class="show-pro">
-                        <a href="index.php?idNameSP=Adidas&act=XemSP">Xem tất cả sản phẩm => </a>
+                        <a href="index.php?idNameSP=Adidas&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
                     </div>
                 </div>
                 ';
@@ -67,7 +65,7 @@ $result = DataProvider::executeQuery($sql);
             echo '</div>';
             echo '<div class="show-product">
                     <div class="show-pro">
-                        <a href="index.php?idNameSP=Converse&act=XemSP">Xem tất cả sản phẩm => </a>
+                        <a href="index.php?idNameSP=Converse&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
                     </div>
                 </div>
                 ';
@@ -82,7 +80,7 @@ $result = DataProvider::executeQuery($sql);
             echo '</div>';
             echo '<div class="show-product">
                     <div class="show-pro">
-                        <a href="index.php?idNameSP=Balenciaga&act=XemSP">Xem tất cả sản phẩm => </a>
+                        <a href="index.php?idNameSP=Balenciaga&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
                     </div>
                 </div>
                 ';
@@ -92,44 +90,35 @@ $result = DataProvider::executeQuery($sql);
     echo '</div>
     </div>';
     }   
-
     
         else if(isset($_GET['act']) && isset($_GET['idNameSP']))
-        {   $sql="SELECT * FROM sanpham WHERE idloai=2";
+        {   $ProductUrl='GiaoDien/SanPham/'.strtolower($_GET['idNameSP']).'_panel.php';
+            $tempResult = DataProvider::executeQuery("SELECT * FROM `theloai` where tentheloai = '".$_GET['idNameSP']."'");
+            $rowTheLoai=mysqli_fetch_array($tempResult);
+        //  ======== Phân Trang ========
+            $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."'";
             $result = DataProvider::executeQuery($sql);
             $soSP = 4;
             $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
             $vitri = ($_GET['page']-1)*$soSP;
-                echo '<div class="product-nike pro-it">
-                <div class="txt-content">
-                    <p>'.$_GET['idNameSP'].'</p>
-                </div>';
-            echo '<div class="item-pro">';
-            if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Nike')
-                include_once 'GiaoDien/SanPham/nike_panel.php';
-            else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Vans')
-                include_once 'GiaoDien/SanPham/vans_panel.php';
-            else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Adidas')
-                include_once 'GiaoDien/SanPham/adidas_panel.php';
-            else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Converse')
-                include_once 'GiaoDien/SanPham/converse_panel.php';
-            else if($_GET['act']=='XemSP' && $_GET['idNameSP']=='Balenciaga')
-                include_once 'GiaoDien/SanPham/balenciaga_panel.php';
-            echo '</div>';
-            echo '<div class="show-product">
-                    <div class="show-pro">
-                        <a href="index.php">
-                        Quay lại=> 
-                        </a>
+        //  ======= end Phân Trang =======
+
+        echo    '<div class="product-nike pro-it">
+                    <div class="txt-content">
+                        <p>'.$rowTheLoai['tentheloai'].'</p>
                     </div>
+                    <div class="item-pro">';
+                    include_once $ProductUrl;
+        echo        '</div>
                 </div>
-                ';
-        echo '</div>';
-        echo'<div class="ProductPage">';
-        for($i=1;$i<=$totalPage;$i++){
+
+            <div class="ProductPage">';
+            for($i=1;$i<=$totalPage;$i++){
             echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'">'.$i.'</a>';
+            }
+            echo'</div>';
         }
-        echo'</div>';
-                                    }
                                     
-                                    ?>
+                              
+                                    
+    ?>

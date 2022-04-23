@@ -1,12 +1,15 @@
 <?php 
 include_once 'DataProvider.php';
 include_once 'GiaoDien/format_price.php';
-if(!isset($_GET['act']) && !isset($_GET['idNameSP']))
-    $sql = "SELECT * FROM sanpham WHERE idloai=4 LIMIT 4";
-else if($_GET['act']=="XemSP" && $_GET['idNameSP']=="Converse")
-    $sql = "SELECT * FROM sanpham WHERE idloai=4";$result = DataProvider::executeQuery($sql);
 
-        while($row = mysqli_fetch_array($result))
+if(!isset($_GET['act']) && !isset($_GET['idNameSP']))
+    $sql2 = "SELECT * FROM sanpham WHERE idloai=4 LIMIT 4";
+else if($_GET['act']=="XemSP" && $_GET['idNameSP']=="Converse")
+    $sql2 = "SELECT * FROM sanpham WHERE idloai=4 LIMIT ".$vitri.",".$soSP;
+
+$result2 = DataProvider::executeQuery($sql2);
+
+        while($row = mysqli_fetch_array($result2))
         {
             echo '
                         <div class="product-item">
