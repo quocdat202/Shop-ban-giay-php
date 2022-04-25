@@ -16,7 +16,8 @@
     />
 	
 	<link type="text/css" rel="stylesheet" href="css/style1.css">
-	<link type="text/css" rel="stylesheet" href="css/home.css">
+	<link type="text/css" rel="stylesheet" href="css/home1.css">
+	<!-- <link type="text/css" rel="stylesheet" href="css/footer.css"> -->
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 
     <title>Shop giày</title>
@@ -54,7 +55,7 @@
                 ?>
             </div>
             <?php require_once 'giaodien/Trangchu/footer.php';  
-                    echo $_SESSION['user'];
+                    // echo $_SESSION['user'];
                     
             ?>
             
