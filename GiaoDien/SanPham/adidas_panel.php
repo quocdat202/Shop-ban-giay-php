@@ -2,9 +2,9 @@
 include_once 'DataProvider.php';
 include_once 'GiaoDien/format_price.php';
 if(!isset($_GET['act']) && !isset($_GET['idNameSP']))
-    $sql = "SELECT * FROM sanpham WHERE idloai=3 LIMIT 4";
+    $sql = "SELECT * FROM sanpham WHERE idloai=3 AND hienthi=1 LIMIT 4";
 else if($_GET['act']=="XemSP" && $_GET['idNameSP']=="Adidas")
-    $sql = "SELECT * FROM sanpham WHERE idloai=3";
+    $sql = "SELECT * FROM sanpham WHERE idloai=3 ";
 $result = DataProvider::executeQuery($sql);
 
         while($row = mysqli_fetch_array($result))

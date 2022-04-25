@@ -9,83 +9,116 @@ include_once 'GiaoDien/format_price.php';
                     <div class="product">';
     if(!isset($_GET['act']) && !isset($_GET['idNameSP'])){
 
-        echo '<div class="product-nike pro-it">
-                <div class="txt-content">
-                    <p>Nike</p>
-                </div>';
+        echo '<div class="title-pro">
+                <div class="clearfix vi-header">
+                    <h3 class="vi-left-title-2 pull-left">NIKE</h3>
+                    <div class="vi-right-link pull-right">
+                        <a class="vi-more" href="index.php?idNameSP=Nike&act=XemSP&page=1">Xem tất cả »</a>
+                    </div>
+                </div>
+            </div>';
             echo '<div class="item-pro">';
                     include_once 'GiaoDien/SanPham/nike_panel.php';
             echo '</div>';
             echo '<div class="show-product">
-                    <div class="show-pro">
-                        <a href="index.php?idNameSP=Nike&act=XemSP&page=1" >
-                        Xem tất cả sản phẩm => 
-                        </a>
-                    </div>
                 </div>
                 ';
         echo '</div>';
     
-        echo '<div class="product-vans pro-it">
-                <div class="txt-content">
-                    <p>Vans</p>
-                </div>';
+
+        echo '<div class="title-pro">
+                <div class="clearfix vi-header">
+                    <h3 class="vi-left-title-2 pull-left">VANS</h3>
+                    <div class="vi-right-link pull-right">
+                        <a class="vi-more" href="index.php?idNameSP=Vans&act=XemSP&page=1">Xem tất cả »</a>
+                    </div>
+                </div>
+            </div>';
             echo '<div class="item-pro">';
                     include_once 'GiaoDien/SanPham/vans_panel.php';
             echo '</div>';
             echo '<div class="show-product">
-                    <div class="show-pro">
-                        <a href="index.php?idNameSP=Vans&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
-                    </div>
                 </div>
                 ';
         echo '</div>';
     
-        echo '<div class="product-adidas pro-it">
-                <div class="txt-content">
-                    <p>Adidas</p>
-                </div>';
+        
+        echo '<div class="title-pro">
+                <div class="clearfix vi-header">
+                    <h3 class="vi-left-title-2 pull-left">ADIDAS</h3>
+                    <div class="vi-right-link pull-right">
+                        <a class="vi-more" href="index.php?idNameSP=Adidas&act=XemSP&page=1">Xem tất cả »</a>
+                    </div>
+                </div>
+            </div>';
             echo '<div class="item-pro">';
                     include_once 'GiaoDien/SanPham/adidas_panel.php';
             echo '</div>';
             echo '<div class="show-product">
-                    <div class="show-pro">
-                        <a href="index.php?idNameSP=Adidas&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
-                    </div>
                 </div>
                 ';
         echo '</div>';
     
-        echo '<div class="product-converse pro-it">
-                <div class="txt-content">
-                    <p>Converse</p>
-                </div>';
+
+        echo '<div class="title-pro">
+                <div class="clearfix vi-header">
+                    <h3 class="vi-left-title-2 pull-left">CONVERSE</h3>
+                    <div class="vi-right-link pull-right">
+                        <a class="vi-more" href="index.php?idNameSP=Converse&act=XemSP&page=1">Xem tất cả »</a>
+                    </div>
+                </div>
+            </div>';
             echo '<div class="item-pro">';
                     include_once 'GiaoDien/SanPham/converse_panel.php';
             echo '</div>';
             echo '<div class="show-product">
-                    <div class="show-pro">
-                        <a href="index.php?idNameSP=Converse&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
-                    </div>
                 </div>
                 ';
         echo '</div>';
     
-        echo '<div class="product-balenciaga pro-it">
-                <div class="txt-content">
-                    <p>Balenciaga</p>
-                </div>';
+
+        echo '<div class="title-pro">
+                <div class="clearfix vi-header">
+                    <h3 class="vi-left-title-2 pull-left">BALENCIAGA</h3>
+                    <div class="vi-right-link pull-right">
+                        <a class="vi-more" href="index.php?idNameSP=Balenciaga&act=XemSP&page=1">Xem tất cả »</a>
+                    </div>
+                </div>
+            </div>';
             echo '<div class="item-pro">';
                     include_once 'GiaoDien/SanPham/balenciaga_panel.php';
             echo '</div>';
             echo '<div class="show-product">
-                    <div class="show-pro">
-                        <a href="index.php?idNameSP=Balenciaga&act=XemSP&page=1">Xem tất cả sản phẩm => </a>
-                    </div>
+                </div>
+                ';
+        echo '</div>';
+
+
+        $sql2 = "SELECT * FROM bannersale WHERE hienthi=1";
+        $result2 = DataProvider::executeQuery($sql2);
+        while($row = mysqli_fetch_array($result2))
+        {
+        echo'
+            <div class="banner-sale">
+                <div class="product-sale pro-it pro-sale">
+                    <img src="images/'.$row['hinhanh'].'">
+                </div>
+            </div>
+        ';
+        }
+        
+        echo '<div class="product-sale pro-it">
+                <div class="txt-content">
+                </div>';
+            echo '<div class="item-pro">';
+                    include_once 'GiaoDien/SanPham/SanphamSale.php';
+            echo '</div>';
+            echo '<div class="show-product">
                 </div>
                 ';
         echo '</div>';
     
+        
     echo'</div>';
     echo '</div>
     </div>';

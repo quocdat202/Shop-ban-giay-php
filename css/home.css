@@ -186,6 +186,7 @@ body {
 .swiper {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 53px;
 }
 
 .content-center {
@@ -242,6 +243,7 @@ body {
 .item-pro {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 
 /* .product-nike,.product-vans{
@@ -256,9 +258,7 @@ body {
     color: black;
 }
 
-.show-product {
-    padding-top: 20px;
-}
+
 
 .pro-it {
     padding-bottom: 50px;
@@ -268,9 +268,6 @@ body {
 
 
 .dummy_page {
-    height: 200px;
-    width: 100%;
-    background-color: #f0f0f0;
     text-align: center;
     box-sizing: border-box;
     padding: 60px 0px;
@@ -281,11 +278,10 @@ body {
     width: 100%;
     position: relative;
     height: auto;
-    background-color: #070617;
 }
 
 .footer .col {
-    width: 190px;
+    width: 25%;
     height: auto;
     float: left;
     box-sizing: border-box;
@@ -301,7 +297,7 @@ body {
     font-size: 12px;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
-    color: rgba(255, 255, 255, 0.2);
+    /* color: rgba(255, 255, 255, 0.2); */
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.250em;
@@ -314,7 +310,7 @@ body {
 }
 
 .footer .col ul li {
-    color: #999999;
+    color: #2e2e2ee0;
     font-size: 14px;
     font-family: inherit;
     font-weight: bold;
@@ -331,7 +327,7 @@ body {
 }
 
 .footer .col ul li:hover {
-    color: #ffffff;
+    color: #FC7FB2;
     transition: .1s;
     -webkit-transition: .1s;
     -moz-transition: .1s;
@@ -342,7 +338,7 @@ body {
 }
 
 .info-design {
-    background-color: white;
+    background-color: rgb(188, 188, 188);
     text-align: center;
 }
 
@@ -475,7 +471,7 @@ body {
 
 .pro-item {
     border-radius: 8px;
-    box-shadow: 0px 0px 7px background;
+    box-shadow: 0px 0px 3px background;
     padding: 12px;
 }
 
@@ -513,18 +509,144 @@ body {
     justify-content: center;
 }
 
-.ProductPage a {
-    padding: 1px 7px;
-    border: 2px solid #000;
-    margin: 0px 4px;
-    font-size: 20px;
-    border-radius: 5px;
-    color: #000;
-    background-color: #fff;
-    font-weight: 500;
+.price-old {
+    text-decoration: line-through;
+    color: black !important;
+    float: left;
+    padding-right: 10px;
 }
 
-.ProductPage a:hover {
+.pro-sale img {
+    width: 100%;
+}
+
+/*================================================FOOTER===========================================================*/
+.footer-info-top {
+    border-top: 3px solid blue;
+    border-bottom: 1px dashed #b6b6b6;
+    padding: 25px 0 0 0;
+}
+
+.txt-ft {
+    padding: 5px 0 5px 55px;
+}
+
+.col strong {
+    color: #FC7FB2;
+}
+
+.ft-item {
+    width: 25%;
+}
+
+.ft-item img {
+    float: left;
+    width: 13%;
+}
+
+.footer-top {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    padding-left: 70px;
+}
+
+.ft {
+    display: flex;
+    flex-flow: column;
+    width: 90% !important;
+    padding-top: 20px;
+}
+
+.ft-center {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.post {
+    width: 98%;
+    background-color: white;
+}
+
+.mota-footer {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.mota {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mota h6 {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* codfe.com - code 3 */
+.title-pro {
+    padding: 0 10px;
+}
+
+.vi-header {
+    border-bottom: solid 1px #0056a8;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-right {
+    margin-right: 0 !important;
+}
+
+.vi-right-link a:first-child {
+    margin-left: 0;
+}
+
+.vi-right-link a {
+    color: #555;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.vi-right-link a.vi-more,
+.vi-right-link a:hover {
+    color: #0056a8;
+}
+
+.vi-right-link a.vi-more:after {
+    font-family: FontAwesome;
+    margin-left: 4px;
+}
+
+.vi-left-title-2:after {
+    border: 17px solid transparent;
+    border-left-color: #0056a8;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    content: "";
+}
+
+.vi-left-title-2 {
+    width: auto;
+    background: #0056a8;
     color: #fff;
-    background-color: #000;
+    padding: 2px 10px;
+    font-size: 19px;
+    position: relative;
+    margin: 0;
+}
+
+.vi-left-title-2 a {
+    color: #fff;
 }

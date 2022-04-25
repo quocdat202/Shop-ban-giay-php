@@ -3,7 +3,7 @@ include_once 'DataProvider.php';
 include_once 'GiaoDien/format_price.php';
 
 if(!isset($_GET['act']) && !isset($_GET['idNameSP']))
-    $sql2 = "SELECT * FROM sanpham WHERE idloai=4 LIMIT 4";
+    $sql2 = "SELECT * FROM sanpham WHERE idloai=4 AND hienthi=1 LIMIT 4";
 else if($_GET['act']=="XemSP" && $_GET['idNameSP']=="Converse")
     $sql2 = "SELECT * FROM sanpham WHERE idloai=4 LIMIT ".$vitri.",".$soSP;
 

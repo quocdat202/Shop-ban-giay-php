@@ -15,7 +15,7 @@
               <img src="images/exchange.png"/>
               <div class="txt-ft">
                 <strong>ĐỔI TRẢ DỄ DÀNG</strong>
-                <p>1 đổi 1 trong 15 ngày</p>
+                <p>1 đổi 1 trong 3 ngày</p>
               </div>
             </div>
             <div class="ft-item">

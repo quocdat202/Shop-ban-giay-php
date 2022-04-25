@@ -16,7 +16,7 @@
     />
 	
 	<link type="text/css" rel="stylesheet" href="css/style1.css">
-	<link type="text/css" rel="stylesheet" href="css/home1.css">
+	<link type="text/css" rel="stylesheet" href="css/home.css">
 	<!-- <link type="text/css" rel="stylesheet" href="css/footer.css"> -->
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 
@@ -30,29 +30,29 @@
                 require_once 'giaodien/Trangchu/header.php';
             ?>
             <div class="content">
-            <?php
-                    // require_once 'giaodien/LeftContent.php';
-                    // if (isset($_GET['act'])){
-                    //     if ($_GET['act'] == "detailproduct")
-                    //         require_once 'giaodien/detailproduct.php';
-                    // }
-                     if(isset($_GET['act'])){
-                        if ($_GET['act'] == "XemSP")
-                        require_once 'giaodien/TrangChu/center_content.php';
-                    }
-                    else if(!isset($_GET['act']))
-                    require_once 'giaodien/TrangChu/banner.php';
-                ?>
-                <?php 
-                    if (isset($_GET['act'])){
-                        if ($_GET['act'] == "detailproduct")
-                            require_once 'giaodien/detailproduct.php';
-                        else if($_GET['act']== "cart")
-                            require_once 'giaodien/giohang.php';
-                    }
-                    else 
-                        require_once 'giaodien/TrangChu/center_content.php';
-                ?>
+                <?php
+                        // require_once 'giaodien/LeftContent.php';
+                        // if (isset($_GET['act'])){
+                        //     if ($_GET['act'] == "detailproduct")
+                        //         require_once 'giaodien/detailproduct.php';
+                        // }
+                        if(isset($_GET['act'])){
+                            if ($_GET['act'] == "XemSP")
+                            require_once 'giaodien/TrangChu/center_content.php';
+                        }
+                        else if(!isset($_GET['act']))
+                        require_once 'giaodien/TrangChu/banner.php';
+                    ?>
+                    <?php 
+                        if (isset($_GET['act'])){
+                            if ($_GET['act'] == "detailproduct")
+                                require_once 'giaodien/detailproduct.php';
+                            else if($_GET['act']== "cart")
+                                require_once 'giaodien/giohang.php';
+                        }
+                        else 
+                            require_once 'giaodien/TrangChu/center_content.php';
+                    ?>
             </div>
             <?php require_once 'giaodien/Trangchu/footer.php';  
                     // echo $_SESSION['user'];

@@ -3,10 +3,7 @@ include_once 'DataProvider.php';
 include_once 'GiaoDien/format_price.php';
 
 if(!isset($_GET['act']) && !isset($_GET['idNameSP']))
-    $sql2 = "SELECT * FROM sanpham WHERE idloai=1 AND hienthi=1 LIMIT 4";
-else if($_GET['act']=="XemSP" && $_GET['idNameSP']=="Nike")
-    $sql2 = "SELECT * FROM sanpham WHERE idloai=1 LIMIT ".$vitri.",".$soSP;
-
+    $sql2 = "SELECT * FROM sanpham WHERE hienthi=2";
 $result2 = DataProvider::executeQuery($sql2);
 
         while($row = mysqli_fetch_array($result2))
@@ -22,7 +19,8 @@ $result2 = DataProvider::executeQuery($sql2);
                                         <p>'.$row['ten'].'</p>
                                     </div>
                                     <div class="product-price">
-                                        <p>'.currency_format($row['gia']).'</p>
+                                        <p class="price-old">'.currency_format($row['gia']).'</p>
+                                        <p>'.currency_format($row['gia']*0.65).'</p>
                                     </div>
                                 </a>
                             </div>
