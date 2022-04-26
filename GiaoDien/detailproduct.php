@@ -15,8 +15,21 @@
                     </div>
                     <div class="ct-right">
                         <p class="name-pro">'.$row['ten'].'</p>
-                        <p class="price-pro">'.currency_format($row['gia']).'</p>
-                        <p class="color-pro">Màu sắc: </p>
+                        ';
+                        if ($row['hienthi'] == 2){
+                        echo '
+                            <p class="price-proold">'.currency_format($row['gia']).'</p>
+                            <p class="price-pro">'.currency_format($row['gia']*0.65).'</p>
+                        ';
+                        }
+                        else 
+                            echo '
+                                <p class="price-pro">'.currency_format($row['gia']).'</p>
+                            ';
+                        
+                        echo
+                        '
+                        <p class="color-pro">Màu sắc: '.$row['mausac'].'</p>
                         <div class="ct-right-size">
                             <p class="color-pro">Size: </p>
                             <form>

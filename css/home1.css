@@ -450,6 +450,11 @@ body {
     color: red;
 }
 
+.price-proold {
+    text-decoration: line-through;
+    margin: 0;
+}
+
 .color-pro {
     margin: 0 !important;
     font-size: 15px;
@@ -588,10 +593,6 @@ body {
 
 
 
-
-
-
-/* codfe.com - code 3 */
 .title-pro {
     padding: 0 10px;
 }
