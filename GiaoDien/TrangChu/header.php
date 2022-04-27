@@ -29,8 +29,9 @@ echo '
             </div>
           </nav>
         </div>
-      </section>
-      <div class="container center-pg">
+      </section>';
+    echo'
+     <div class="container center-pg">
       <div class="center-page">
       <div class="logo-nav">
         <a href="index.php">

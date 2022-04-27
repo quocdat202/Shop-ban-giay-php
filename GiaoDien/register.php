@@ -61,7 +61,7 @@
                 success:function(data){
                     if(data=="name")
                     alert("Tên đăng nhập đã được sử dụng");
-                    return 0;
+                    return false;
                 }
             })   
         });
@@ -74,7 +74,7 @@
                 success:function(data){
                     if(data=="phone")
                     alert("Số điện thoại đã được sử dụng");
-                    return 0;
+                    return false;
                 }
             })   
         });
@@ -87,7 +87,7 @@
                 success:function(data){
                     if(data=="email")
                     alert("Email đã được sử dụng");
-                    return 0;
+                    return false;
                 }
             })   
         });

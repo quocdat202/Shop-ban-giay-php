@@ -652,3 +652,18 @@ body {
     color: #fff;
 }
 
+.info-cart {
+    margin: 4px 74px;
+    margin-bottom: 40px !important;
+
+}
+
+.show-cart {
+    margin: 4px 74px;
+    margin-bottom: 40px
+}
+
+.show-cart table {
+    width: 100%;
+    text-align: center;
+}
