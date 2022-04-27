@@ -1,4 +1,4 @@
 <?php
-    include_once('DataProvider.php');
+    echo "dsa";
     
 ?>

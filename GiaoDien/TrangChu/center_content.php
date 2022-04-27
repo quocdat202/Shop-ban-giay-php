@@ -138,7 +138,7 @@ include_once 'GiaoDien/format_price.php';
 
         echo    '<div class="product-nike pro-it">
                     <div class="txt-content">
-                        <p>'.$rowTheLoai['tentheloai'].'</p>
+                        <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
                     </div>
                     <div class="item-pro">';
                     include_once $ProductUrl;
