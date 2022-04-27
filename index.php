@@ -16,7 +16,7 @@
     />
 	
 	<link type="text/css" rel="stylesheet" href="css/style1.css">
-	<link type="text/css" rel="stylesheet" href="css/home1.css">
+	<link type="text/css" rel="stylesheet" href="css/home.css">
 	<!-- <link type="text/css" rel="stylesheet" href="css/footer.css"> -->
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 

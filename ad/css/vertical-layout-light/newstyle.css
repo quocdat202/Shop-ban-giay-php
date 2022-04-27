@@ -1,0 +1,11 @@
+.page-body-wrapper {
+    padding-top: 0 !important;
+}
+
+.table-sp {
+    overflow-x: auto;
+}
+
+.form-edit {
+    width: 100% !important;
+}
