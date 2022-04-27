@@ -1,10 +1,11 @@
 <link type="text/css" rel="stylesheet" href="../css/register.css">
 <script src="../javascript/register.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <div class="register-form">
     <div class="register-container">
         <div class="register-title">Registration</div>
         <div id="note"></div>
-        <form action="XuLy/XuLyRegister.php" onsubmit="return check_register();">
+        <form action="" id="RegisterForm"  method="get">
             <div class="user-details">
                 <div class="reg-input-box">
                     <span class="details">Họ và tên</span>
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="register-button">
-                <input type="submit" value="Đăng ký" onclick="check_register();">
+                <input id="reg-submit-btn" type="submit" value="Đăng ký" onclick="check_register();">
             </div>
             <div class="register-bottom-text">
                 <p class="reg-text1">Đã sở hữu tài khoản ?</p>
@@ -48,3 +49,58 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    
+    $(document).ready(function() {     
+        $('#reg-name').on('blur',function(){
+            var tendangnhap = $('#reg-name').val();
+            // var sophone = $('#reg-phone').val();
+            // var email = $('#reg-mail').val();
+            $.ajax({
+                url: "RegisterAjax.php",
+                method: "GET",
+                data:{tendangnhap:tendangnhap},
+                success:function(data){
+                    if(data=="name")
+                    alert("Tên đăng nhập đã được sử dụng");
+                    return 0;
+                }
+            })   
+        });
+        $('#reg-name').on('blur',function(){
+            var sophone = $('#reg-phone').val();
+            $.ajax({
+                url: "RegisterAjax.php",
+                method: "GET",
+                data:{sophone:sophone},
+                success:function(data){
+                    if(data=="phone")
+                    alert("Số điện thoại đã được sử dụng");
+                    return 0;
+                }
+            })   
+        });
+    })
+    
+</script>
+
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+    $('#reg-submit-btn').submit(function(e) {
+        e.preventDefault();
+        if(check_register()==true){
+        $.ajax({
+            type: "GET",
+            url: "RegisterAjax.php",
+            data: $(this).serialize(),
+            success: function(response)
+            {
+                var jsonData = JSON.parse(response);
+                if (jsonData.success == "1")
+                    alert("hi");
+            }
+       });
+        }
+     });
+});
+</script> -->

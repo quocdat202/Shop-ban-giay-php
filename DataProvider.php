@@ -1,25 +1,24 @@
 <?php
+
 class DataProvider
 {
-	
 	public static function executeQuery($sql)
 	{
-		require ('ketnoi.php');
-
-		if (($connection = mysqli_connect($host,$user,$pass,$db)))
-			echo"<script> console.log('Kết nối thành công')</script>";
-		else 
-			echo"<script> console.log('Không thể kết nối')</script>";
-
+		include ('ketnoi.php');
+			// 1. Tao ket noi CSDL
+		if (!($connection = mysqli_connect($host,$user,$pass)))
+			die ("couldn't connect to localhost");
+		if (!(mysqli_select_db($connection,$db)))
+			echo "Khong the ket noi 1";
+		//2. Thiet lap font Unicode
 		if (!(mysqli_query($connection,"set names 'utf8'")))
-			echo"<script> console.log('Không thể set names 'utf8'')</script>";
-
+			echo "Khong the set utf8";
+		// Thuc thi cau truy van
 		if (!($result = mysqli_query($connection,$sql)))
-			echo"<script> console.log('Không thể kết nối 3')</script>";
- 
+			echo "Khong the ket noi 3"; 
+		// Dong ket noi CSDL
 		if (!(mysqli_close($connection)))
-			echo"<script> console.log('Không thể kết nối 4')</script>";
-
+			echo "Khong the ket noi 4";
 		return $result;
 	}
 }
