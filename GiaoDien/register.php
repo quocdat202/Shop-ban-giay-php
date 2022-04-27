@@ -5,7 +5,7 @@
     <div class="register-container">
         <div class="register-title">Registration</div>
         <div id="note"></div>
-        <form action="" id="RegisterForm"  method="get">
+        <form action="XuLy/XuLyRegister.php" id="RegisterForm"  method="get">
             <div class="user-details">
                 <div class="reg-input-box">
                     <span class="details">Họ và tên</span>
@@ -54,8 +54,6 @@
     $(document).ready(function() {     
         $('#reg-name').on('blur',function(){
             var tendangnhap = $('#reg-name').val();
-            // var sophone = $('#reg-phone').val();
-            // var email = $('#reg-mail').val();
             $.ajax({
                 url: "RegisterAjax.php",
                 method: "GET",
@@ -67,7 +65,7 @@
                 }
             })   
         });
-        $('#reg-name').on('blur',function(){
+        $('#reg-phone').on('blur',function(){
             var sophone = $('#reg-phone').val();
             $.ajax({
                 url: "RegisterAjax.php",
@@ -76,6 +74,19 @@
                 success:function(data){
                     if(data=="phone")
                     alert("Số điện thoại đã được sử dụng");
+                    return 0;
+                }
+            })   
+        });
+        $('#reg-mail').on('blur',function(){
+            var email = $('#reg-mail').val();
+            $.ajax({
+                url: "RegisterAjax.php",
+                method: "GET",
+                data:{email:email},
+                success:function(data){
+                    if(data=="email")
+                    alert("Email đã được sử dụng");
                     return 0;
                 }
             })   
