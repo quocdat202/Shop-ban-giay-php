@@ -40,6 +40,7 @@
                                     <input name="checkbox" type="radio" value="39" />39
                                     <input name="checkbox" type="radio" value="40" />40
                             </div>
+                            <p class="color-pro">Số lượng:</p>
                             <input name="soluong" type="number" value="1" min="1" max="10" >
                             <div class="ct-right-btn">
                                 <input type="submit" name="buy" value="Mua ngay" class="btn btn-dark btn-buy">

@@ -50,7 +50,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Nike&act=XemSP">
+              <a href="index.php?idNameSP=Nike&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/nike.png" />
                 </div>
@@ -58,7 +58,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Adidas&act=XemSP">
+              <a href="index.php?idNameSP=Adidas&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/Adidas.png" />
                 </div>
@@ -66,7 +66,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Vans&act=XemSP">
+              <a href="index.php?idNameSP=Vans&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/vans.png" />
                 </div>
@@ -74,7 +74,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Converse&act=XemSP">
+              <a href="index.php?idNameSP=Converse&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/Converse.png" />
                 </div>
@@ -82,7 +82,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Balenciaga&act=XemSP">
+              <a href="index.php?idNameSP=Balenciaga&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/Balenciaga.png" />
                 </div>
@@ -90,8 +90,13 @@ echo '
               </a>
             </li>
             <li class="ic-cart">
-              <a href="index.php?act=cart">
-                <img src="images/cart.png" />
+              <a class="icon-cart-a" href="index.php?act=cart">
+                <img class="icon-cart-img" src="images/cart2.png" />';
+              if(isset($_SESSION['giohang']))
+              echo '<p class="icon-cart-number">('.sizeof($_SESSION['giohang']).')</p>';
+              else
+              echo '<p class="icon-cart-number">(0)</p>';
+              echo'
               </a>
             </li>
           </ul>
