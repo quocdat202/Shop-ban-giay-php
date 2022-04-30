@@ -28,23 +28,30 @@
                             ';
                         
                         echo
+                        
                         '
-                        <p class="color-pro">Màu sắc: '.$row['mausac'].'</p>
-                        <div class="ct-right-size">
-                            <p class="color-pro">Size: </p>
-                            <form>
-                                <input name="checkbox" type="radio" value="VN" />36
-                                <input name="checkbox" type="radio" value="36" />36
-                                <input name="checkbox" type="radio" value="37" />37
-                                <input name="checkbox" type="radio" value="38" />38
-                                <input name="checkbox" type="radio" value="39" />39
-                                <input name="checkbox" type="radio" value="40" />40
-                            </form>
-                        </div>
-                        <div class="ct-right-btn">
-                            <button type="button" class="btn btn-dark btn-buy">Mua ngay</button>
-                            <button type="button" class="btn btn-outline-dark btn-buy">Thêm vào giỏ hàng</button>
-                        </div>
+                        <form action="GiaoDien/AddCart.php">
+                            <p class="color-pro">Màu sắc: '.$row['mausac'].'</p>
+                            <div class="ct-right-size">
+                                <p class="color-pro">Size: </p>
+                                    <input name="checkbox" type="radio" value="36" />36
+                                    <input name="checkbox" type="radio" value="37" />37
+                                    <input name="checkbox" type="radio" value="38" />38
+                                    <input name="checkbox" type="radio" value="39" />39
+                                    <input name="checkbox" type="radio" value="40" />40
+                            </div>
+                            <p class="color-pro">Số lượng:</p>
+                            <input name="soluong" type="number" value="1" min="1" max="10" >
+                            <div class="ct-right-btn">
+                                <input type="submit" name="buy" value="Mua ngay" class="btn btn-dark btn-buy">
+                                <input type="submit" name="add" value="Thêm vào giỏ hàng" class="btn btn-outline-dark btn-buy">
+                            </div>
+                            <input type="hidden" name="id" value="'.$row['idSP'].'">
+                            <input type="hidden" name="color" value="'.$row['mausac'].'">
+                            <input type="hidden" name="name" value="'.$row['ten'].'">
+                            <input type="hidden" name="price" value="'.$row['gia'].'">
+                            <input type="hidden" name="img" value="'.$row['hinhanh'].'">
+                        </form>
                         <p class="info-general">MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</p>
                         <p class="info-general">ĐỔI TRẢ MIỄN PHÍ</p>
                         <p class="info-mota">Hỗ trợ dổi trả sản phẩm trong vòng 3 đến 5 ngày, nếu không vừa size,
@@ -118,3 +125,4 @@
     ';
     }
 ?>
+

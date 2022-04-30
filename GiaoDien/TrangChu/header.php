@@ -29,8 +29,9 @@ echo '
             </div>
           </nav>
         </div>
-      </section>
-      <div class="container center-pg">
+      </section>';
+    echo'
+     <div class="container center-pg">
       <div class="center-page">
       <div class="logo-nav">
         <a href="index.php">
@@ -89,8 +90,13 @@ echo '
               </a>
             </li>
             <li class="ic-cart">
-              <a href="index.php?act=cart">
-                <img src="images/cart.png" />
+              <a class="icon-cart-a" href="index.php?act=cart">
+                <img class="icon-cart-img" src="images/cart2.png" />';
+              if(isset($_SESSION['giohang']))
+              echo '<p class="icon-cart-number">('.sizeof($_SESSION['giohang']).')</p>';
+              else
+              echo '<p class="icon-cart-number">(0)</p>';
+              echo'
               </a>
             </li>
           </ul>
