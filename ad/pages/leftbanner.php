@@ -16,28 +16,27 @@
         </a>
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="index.php?act=qlsp">Sản phẩm</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+            <li class="nav-item"> <a class="nav-link" href="index.php?act=qlsp"> Tất cả Sản phẩm</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Thêm sản phẩm</a></li>
           </ul>
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
           <i class="icon-columns menu-icon"></i>
-          <span class="menu-title">Form elements</span>
+          <span class="menu-title">Quản lý tài khoản</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Tài khoản</a></li>
           </ul>
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
           <i class="icon-bar-graph menu-icon"></i>
-          <span class="menu-title">Charts</span>
+          <span class="menu-title">Thống kê</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="charts">

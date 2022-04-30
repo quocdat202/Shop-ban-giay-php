@@ -133,8 +133,11 @@
       if($_GET['act'] == "qlsp")
         include_once 'pages/ui-features/sanpham.php';
 
-      if($_GET['act'] =="edit")
+      else if($_GET['act'] =="edit")
         include_once 'pages/suasanpham.php';
+
+      else if($_GET['act'] =="delete")
+        include_once 'pages/xulyxoasp.php';
     }
     
     else if(!isset($_GET['act']))

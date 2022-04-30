@@ -2,6 +2,7 @@
     echo '
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/slide5.png" /></div>
             <div class="swiper-slide"><img src="images/cover-website.png" /></div>
             <div class="swiper-slide"><img src="images/slide2.png" /></div>
             <div class="swiper-slide"><img src="images/slide3.png" /></div>

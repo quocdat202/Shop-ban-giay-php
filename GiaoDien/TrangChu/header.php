@@ -49,7 +49,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Nike&act=XemSP">
+              <a href="index.php?idNameSP=Nike&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/nike.png" />
                 </div>
@@ -57,7 +57,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Adidas&act=XemSP">
+              <a href="index.php?idNameSP=Adidas&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/Adidas.png" />
                 </div>
@@ -65,7 +65,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Vans&act=XemSP">
+              <a href="index.php?idNameSP=Vans&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/vans.png" />
                 </div>
@@ -73,7 +73,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Converse&act=XemSP">
+              <a href="index.php?idNameSP=Converse&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/Converse.png" />
                 </div>
@@ -81,7 +81,7 @@ echo '
               </a>
             </li>
             <li>
-              <a href="index.php?idNameSP=Balenciaga&act=XemSP">
+              <a href="index.php?idNameSP=Balenciaga&act=XemSP&page=1">
                 <div class="img-nav">
                   <img src="images/Balenciaga.png" />
                 </div>

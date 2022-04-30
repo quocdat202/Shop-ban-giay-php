@@ -31,11 +31,6 @@
             ?>
             <div class="content">
                 <?php
-                        // require_once 'giaodien/LeftContent.php';
-                        // if (isset($_GET['act'])){
-                        //     if ($_GET['act'] == "detailproduct")
-                        //         require_once 'giaodien/detailproduct.php';
-                        // }
                         if(isset($_GET['act'])){
                             if ($_GET['act'] == "XemSP")
                             require_once 'giaodien/TrangChu/center_content.php';
@@ -47,11 +42,15 @@
                         if (isset($_GET['act'])){
                             if ($_GET['act'] == "detailproduct")
                                 require_once 'giaodien/detailproduct.php';
+
                             else if($_GET['act']== "cart")
                                 require_once 'giaodien/giohang.php';
                         }
                         else 
                             require_once 'giaodien/TrangChu/center_content.php';
+
+                        if(!isset($_GET['act']))
+                            require_once 'giaodien/TrangChu/trangblog.php';
                     ?>
             </div>
             <?php require_once 'giaodien/Trangchu/footer.php';  
