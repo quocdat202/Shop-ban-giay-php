@@ -14,7 +14,7 @@ include_once '../GiaoDien/format_price.php';
                 </div>
             </div>
             <div class="row table-sp">
-            <form class="form-edit" action="xulysuasp.php">
+            <form class="form-edit" action="index.php?act=edit" method="post">
             ';
             while($row = mysqli_fetch_array($result))
             {
@@ -66,7 +66,7 @@ include_once '../GiaoDien/format_price.php';
             }
             echo '
                 <div>
-                    <input type="submit" href="" class="btn btn-primary" value="Lưu">
+                    <input type="submit" name="btnSave" class="btn btn-primary" value="Lưu">
                 </div>
             </form>
                 

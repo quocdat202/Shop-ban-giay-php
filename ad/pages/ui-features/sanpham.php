@@ -39,7 +39,7 @@ include_once '../GiaoDien/format_price.php';
             echo '
               <tr>
                 <td>
-                    <a href="index.php?id='.$row['idSP'].'&act=edit">Sửa</a>
+                    <a href="index.php?id='.$row['idSP'].'&act=editpro">Sửa</a>
                     <a href="index.php?id='.$row['idSP'].'&act=delete">Xóa</a>
                 </td>
                 <td>'.$row['idSP'].'</td>

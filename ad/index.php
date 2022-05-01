@@ -3,8 +3,9 @@
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skydash Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
@@ -133,11 +134,15 @@
       if($_GET['act'] == "qlsp")
         include_once 'pages/ui-features/sanpham.php';
 
-      else if($_GET['act'] =="edit")
+      else if($_GET['act'] =="editpro")
         include_once 'pages/suasanpham.php';
 
       else if($_GET['act'] =="delete")
-        include_once 'pages/xulyxoasp.php';
+        include_once 'pages/xulyxoasuasp.php';
+
+      else if($_GET['act'] == "edit")
+        include_once 'pages/xulyxoasuasp.php';
+
     }
     
     else if(!isset($_GET['act']))
