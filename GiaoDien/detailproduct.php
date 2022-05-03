@@ -51,6 +51,7 @@
                             <input type="hidden" name="name" value="'.$row['ten'].'">
                             <input type="hidden" name="price" value="'.$row['gia'].'">
                             <input type="hidden" name="img" value="'.$row['hinhanh'].'">
+                            <input type="hidden" name="hienthi" value="'.$row['hienthi'].'">
                         </form>
                         <p class="info-general">MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</p>
                         <p class="info-general">ĐỔI TRẢ MIỄN PHÍ</p>
@@ -90,12 +91,6 @@
                             <th className="row">Chât liệu</th>
                             <td>
                                 '.$row['chatlieu'].'
-                            </td>
-                        </tr>
-                        <tr>
-                            <th className="row">Số lần mua</th>
-                            <td>
-                                '.$row['solanmua'].'
                             </td>
                         </tr>
                         <tr>

@@ -34,7 +34,17 @@ include_once 'GiaoDien/format_price.php';
                     <th class="fontweight500">'.$_SESSION['giohang'][$i][3].'</th>
                     <th class="fontweight500">'.$_SESSION['giohang'][$i][4].'</th>
                     <th class="fontweight500">'.$_SESSION['giohang'][$i][5].'</th>
-                    <th class="fontweight500">'.currency_format($_SESSION['giohang'][$i][6]).'</th>
+                    ';
+                if($_SESSION['giohang'][$i][7] == 2)
+                    echo '
+                        <th class="fontweight500">'.currency_format($_SESSION['giohang'][$i][6]*0.65).'</th>
+
+                    ';
+                else
+                    echo '
+                        <th class="fontweight500">'.currency_format($_SESSION['giohang'][$i][6]).'</th>
+                    ';
+                echo '
                     <th class="fontweight500"><a href="GiaoDien/AddCart.php?del='.$i.'" style="color:red;font-size:22px">X</a></th>
                 </tr>';
            }

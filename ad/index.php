@@ -134,14 +134,14 @@
       if($_GET['act'] == "qlsp")
         include_once 'pages/ui-features/sanpham.php';
 
+      else if($_GET['act'] =="addproduct")
+        include_once 'pages/themsanpham.php';
+
       else if($_GET['act'] =="editpro")
         include_once 'pages/suasanpham.php';
 
-      else if($_GET['act'] =="delete")
-        include_once 'pages/xulyxoasuasp.php';
-
-      else if($_GET['act'] == "edit")
-        include_once 'pages/xulyxoasuasp.php';
+      else if($_GET['act'] =="delete" || $_GET['act'] == "edit" || $_GET['act'] == "themsanpham")
+        include_once 'pages/xulysp.php';
 
     }
     

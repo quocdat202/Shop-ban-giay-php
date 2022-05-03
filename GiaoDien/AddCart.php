@@ -17,6 +17,7 @@
         $size=$_GET['checkbox'];
         $quantity=$_GET['soluong'];
         $price=$_GET['price'];   
+        $hienthi=$_GET['hienthi'];
         $kiemtra=0;
         for($i=0;$i < sizeof($_SESSION['giohang']);$i++){
             if($_SESSION['giohang'][$i][0]==$id && $_SESSION['giohang'][$i][4]==$size){
@@ -27,7 +28,7 @@
             }
         }
         if($kiemtra==0){
-            $sp=[$id,$img,$name,$color,$size,$quantity,$price];
+            $sp=[$id,$img,$name,$color,$size,$quantity,$price,$hienthi];
         $_SESSION['giohang'][]=$sp;
         }        
         if( isset($_GET['add']))
