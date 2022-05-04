@@ -30,7 +30,7 @@
                         echo
                         
                         '
-                        <form action="GiaoDien/AddCart.php">
+                        <form action="GiaoDien/AddCart.php" onsubmit="return checkradio();">
                             <p class="color-pro">Màu sắc: '.$row['mausac'].'</p>
                             <div class="ct-right-size">
                                 <p class="color-pro">Size: </p>
@@ -121,3 +121,21 @@
     }
 ?>
 
+<script>
+    function checkradio(){
+        var arr=document.getElementsByTagName('input');
+        var check1=arr[1].checked ;
+        var check2=arr[2].checked ;
+        var check3=arr[3].checked ;
+        var check4=arr[4].checked ;
+        var check5=arr[5].checked ;
+        if(check1||check2||check3||check4||check5)
+        return true;
+        else{
+            alert("Vui lòng chọn size ");
+            return false;
+        }
+        
+    }
+    
+</script>

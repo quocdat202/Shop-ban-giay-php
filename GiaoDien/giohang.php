@@ -1,5 +1,12 @@
+<script src="javascript/giohang.js"></script>
 <?php
+include_once 'DataProvider.php';
 include_once 'GiaoDien/format_price.php';
+$showName="";
+$showPhone="";
+$showMail="";
+$showAddress="";
+
     if(!isset($_SESSION['giohang'])){ 
         echo '
         <div>
@@ -51,48 +58,73 @@ include_once 'GiaoDien/format_price.php';
            echo
            '</table>
         </div>
-
-        <div class="info-cart">
-            <div><h1 class="cart-title">Thông tin giao hàng</h1></div>
-            <div class="cart-bottom">
-                <div class="insert-info-cart">
-                    <input type="text" name="inf-name" placeholder="Nhập tên người nhận" class="cart-input-info1">
-                    <input type="text" name="inf-email" placeholder="Email" class="cart-input-info2">
-                    <input type="text" name="inf-phone" placeholder="Số điện thoại" class="cart-input-info3">
-                    <input type="text" name="inf-address" placeholder="Địa chỉ nhận hàng" class="cart-input-info1">
-                    <input type="text" placeholder="Ghi chú" class="cart-input-info4" >
-                    <p class="cart-notice2">Nếu có bất kì thắc mắc xin vui lòng liên hệ Facebook hoặc @instagram để được bọn tớ giải đáp .MWC rất cảm ơn vì bạn đã ủng hộ bọn tớ, chúc bạn một năm mới thật nhiều niềm vui và may mắn :D</p>
-                </div>
-                <div class="cart-buy-area">
-                    <div class="ThanhToan">
-                        <p class="TT-title">Tóm tắt đơn hàng</p>
-                        <table>
-                            <tr>
-                                <td>Thành tiền<td>
-                                <td class="text-right" >'.currency_format($total*0.65).'<td>
-                            <tr>
-                            <tr>
-                                <td>Phí vận chuyển<td>
-                                <td class="text-right">0đ<td>
-                            <tr>';
-                            echo'
-                            <tr>
-                                <td>Tổng cộng<td>
-                                <td class="text-right">'.currency_format($total*0.65).'<td>
-                            <tr>
-                        </table>
-                        <h3 class="cart-notice1">
-                            MWC áp dụng phí vận chuyển 0 VND cho toàn quốc . Bạn vui lòng KIỂM TRA email sau khi đặt hàng thành công và CHỜ NHẬN HÀNG.
-                        </h3>
-                        <input type="submit" value="Hoàn tất đơn hàng" class="input-cart-DH">
+        
+        <form action="GiaoDien/XuLyGioHang.php" onsubmit="return kiemtra();"  >
+            <div class="info-cart">
+                <div><h1 class="cart-title">Thông tin giao hàng</h1></div>
+                <div class="cart-bottom">
+                    <div class="insert-info-cart">
+                        <div id="note-text"></div>';
+                        if(isset($_SESSION['checklogin'])){
+                            $sql="Select * from khachhang where idUser ='".$_SESSION['iduser']."'";
+                            $result = DataProvider::executeQuery($sql);
+                            while($row=mysqli_fetch_array($result)){
+                                $showName=$row['hoten'];
+                                $showPhone=$row['dienthoai'];
+                                $showMail=$row['email'];
+                                $showAddress=$row['diachi'];                           
+                            }
+                        }
+                        else{
+                            
+                            $showName="";
+                            $showPhone="";
+                            $showMail="";
+                            $showAddress="";
+                        }
+                        echo'
+                            <input type="text" value="'.$showName.'" name="inf-name" placeholder="Nhập tên người nhận" class="cart-input-info1" id="cart-input-info1">
+                            <input type="text" value="'.$showMail.'" name="inf-email" placeholder="Email" class="cart-input-info2" id="cart-input-info2">
+                            <input type="text" value="'.$showPhone.'" name="inf-phone" placeholder="Số điện thoại" class="cart-input-info3" id="cart-input-info3">
+                            <input type="text" value="'.$showAddress.'" name="inf-address" placeholder="Địa chỉ nhận hàng" class="cart-input-info1" id="cart-input-info4">
+                            <input type="text" placeholder="Ghi chú" class="cart-input-info4" >';
+                        echo'
+                        <p class="cart-notice2">Nếu có bất kì thắc mắc xin vui lòng liên hệ Facebook hoặc @instagram để được bọn tớ giải đáp .MWC rất cảm ơn vì bạn đã ủng hộ bọn tớ, chúc bạn một năm mới thật nhiều niềm vui và may mắn :D</p>
                     </div>
-                    
+                    <div class="cart-buy-area">
+                        <div class="ThanhToan">
+                            <p class="TT-title">Tóm tắt đơn hàng</p>
+                            <table>
+                                <tr>
+                                    <td>Thành tiền<td>
+                                    <td class="text-right" >'.currency_format($total).'<td>
+                                <tr>
+                                <tr>
+                                    <td>Phí vận chuyển<td>
+                                    <td class="text-right">20.000đ<td>
+                                <tr>';
+                                $total+=20000;
+                                echo'
+                                <tr>
+                                    <td>Tổng cộng<td>
+                                    <td class="text-right">'.currency_format($total).'<td>
+                                <tr>
+                            </table>
+                            <h3 class="cart-notice1">
+                                MWC áp dụng đồng giá phí vận chuyển 20.000 VND cho toàn quốc . Bạn vui lòng KIỂM TRA email sau khi đặt hàng thành công và CHỜ NHẬN HÀNG.
+                            </h3>
+                            <input type="hidden" name="total" value="'.$total.'" >
+                            <input type="submit" value="Hoàn tất đơn hàng" class="input-cart-DH" >
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-        </div>';
+        </form>';
     }
     
 ?>
+
 
         
         

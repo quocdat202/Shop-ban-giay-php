@@ -54,7 +54,7 @@
                     ?>
             </div>
             <?php require_once 'giaodien/Trangchu/footer.php';  
-                    // echo $_SESSION['user'];
+                    // echo $_SESSION['iduser'];
                     
             ?>
             

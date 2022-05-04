@@ -21,10 +21,15 @@ echo '
                     <li class="nav-item active"><a href="index.php" class="nav-link">Trang chủ</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Giới thiệu</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Bảo hành</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Bài viết</a></li>
-                    <li class="nav-item"><a href="GiaoDien/register.php" class="nav-link">Đăng ký</a></li>
-                    <li class="nav-item"><a href="GiaoDien/login.php" class="nav-link">Đăng nhập</a></li>                    
-                </ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Bài viết</a></li>';
+                    if(!isset($_SESSION['checklogin']))
+                    echo '<li class="nav-item"><a href="GiaoDien/register.php" class="nav-link">Đăng ký</a></li>
+                    <li class="nav-item"><a href="GiaoDien/login.php" class="nav-link">Đăng nhập</a></li>';
+                    else                
+                    echo '<li class="nav-item"><a href="" class="nav-link">Lịch sử</a></li>
+                    <li class="nav-item"><a href="GiaoDien/XuLy/Logout.php" class="nav-link">Đăng xuất</a></li>';
+                    
+                echo '</ul>
               </div>
             </div>
           </nav>
