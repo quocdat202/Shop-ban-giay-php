@@ -7,10 +7,14 @@ session_start();
     
         if (mysqli_num_rows($result) > 0){
             $_SESSION['user'] = $_GET['tendangnhap'];
+            $_SESSION['checklogin'] = 1;
             while($row = mysqli_fetch_array($result))
             {
-                if($row['idQuyen'] == 3)
+                if($row['idQuyen'] == 3){
+                    $_SESSION['iduser'] = $row['idUser'];
                     header('location:../index.php');
+                }
+                    
                 else if($row['idQuyen'] == 1)
                     header('location:../ad/index.php');
             }
