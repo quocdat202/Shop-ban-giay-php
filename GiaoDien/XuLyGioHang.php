@@ -4,7 +4,7 @@
     if(isset($_SESSION['checklogin'])){
         if($_SESSION['checklogin']==1){
             $idDH;
-     ==================  insert vào đơn hàng  =============================
+    // ==================  insert vào đơn hàng  =============================
             $sql = "insert into donhang(idKH,ngaydathang,tennguoinhan,diachigiaohang,tongtien,trangthai,ghichu)
                     values
                     (
