@@ -69,21 +69,20 @@ include_once 'GiaoDien/format_price.php';
                         <table>
                             <tr>
                                 <td>Thành tiền<td>
-                                <td class="text-right" >'.currency_format($total).'<td>
+                                <td class="text-right" >'.currency_format($total*0.65).'<td>
                             <tr>
                             <tr>
                                 <td>Phí vận chuyển<td>
-                                <td class="text-right">20.000đ<td>
+                                <td class="text-right">0đ<td>
                             <tr>';
-                            $total+=20000;
                             echo'
                             <tr>
                                 <td>Tổng cộng<td>
-                                <td class="text-right">'.currency_format($total).'<td>
+                                <td class="text-right">'.currency_format($total*0.65).'<td>
                             <tr>
                         </table>
                         <h3 class="cart-notice1">
-                            MWC áp dụng đồng giá phí vận chuyển 20.000 VND cho toàn quốc . Bạn vui lòng KIỂM TRA email sau khi đặt hàng thành công và CHỜ NHẬN HÀNG.
+                            MWC áp dụng phí vận chuyển 0 VND cho toàn quốc . Bạn vui lòng KIỂM TRA email sau khi đặt hàng thành công và CHỜ NHẬN HÀNG.
                         </h3>
                         <input type="submit" value="Hoàn tất đơn hàng" class="input-cart-DH">
                     </div>

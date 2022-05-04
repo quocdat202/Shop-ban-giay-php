@@ -45,6 +45,7 @@
         WHERE idSP = ' $idSP' 
         ";
         DataProvider::executeQuery2($sql);
+        
         echo '<script> location.replace("index.php?act=qlsp"); </script>';
         }
 

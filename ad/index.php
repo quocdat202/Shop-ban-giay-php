@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skydash Admin</title>
+  <title>Sneaker Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -126,27 +126,47 @@
     <div class="container-fluid page-body-wrapper">
 
     <?php
-      include_once 'pages/leftbanner.php'
+      include_once 'pages/ui-features/leftbanner.php'
     ?>
 
     <?php
     if(isset($_GET['act'])){
       if($_GET['act'] == "qlsp")
-        include_once 'pages/ui-features/sanpham.php';
+        include_once 'pages/ui-features/sản phẩm/sanpham.php';
 
       else if($_GET['act'] =="addproduct")
-        include_once 'pages/themsanpham.php';
+        include_once 'pages/ui-features/sản phẩm/themsanpham.php';
 
       else if($_GET['act'] =="editpro")
-        include_once 'pages/suasanpham.php';
+        include_once 'pages/ui-features/sản phẩm/suasanpham.php';
 
-      else if($_GET['act'] =="delete" || $_GET['act'] == "edit" || $_GET['act'] == "themsanpham")
-        include_once 'pages/xulysp.php';
+      else if($_GET['act'] =="delete" || $_GET['act'] == "edit" || $_GET['act'] == "themsanpham"){
+        echo '<script>
+            alert(window.location.href)
+          ;
+
+        </script>'; 
+        include_once 'pages/xuly/xulysp.php';
+
+
+      }
+
+      else if($_GET['act'] =="qltk")
+        include_once 'pages/ui-features/tài khoản/taikhoan.php';
+
+      else if($_GET['act'] =="themtk")
+        include_once 'pages/ui-features/tài khoản/themtaikhoan.php';
+      
+      else if($_GET['act'] =="editacc")
+        include_once 'pages/ui-features/tài khoản/suataikhoan.php';
+
+      else if($_GET['act'] =="deleteacc" || $_GET['act'] ="edittaikhoan" || $_GET['act'] ="themtaikhoan")
+        include_once 'pages/xuly/xylytaikhoan.php';
 
     }
     
     else if(!isset($_GET['act']))
-      include_once 'pages/content.php';
+      include_once 'pages/ui-features/content.php';
   ?>
     </div>
     <!-- page-body-wrapper ends -->

@@ -24,12 +24,26 @@
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
           <i class="icon-columns menu-icon"></i>
-          <span class="menu-title">Quản lý tài khoản</span>
+          <span class="menu-title">Quản lý đơn hàng</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Tài khoản</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Đơn hàng chờ xử lý</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Đơn hàng đang xử lý</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+          <i class="icon-head menu-icon"></i>
+          <span class="menu-title">Quản lý tài khoản</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="auth">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="index.php?act=qltk"> Tài khoản </a></li>
+            <li class="nav-item"> <a class="nav-link" href="index.php?act=themtk"> Thêm tài khoản </a></li>
           </ul>
         </div>
       </li>
@@ -69,19 +83,7 @@
           </ul>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-          <i class="icon-head menu-icon"></i>
-          <span class="menu-title">User Pages</span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse" id="auth">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-          </ul>
-        </div>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
           <i class="icon-ban menu-icon"></i>

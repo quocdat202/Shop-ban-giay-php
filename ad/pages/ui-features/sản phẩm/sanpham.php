@@ -46,7 +46,7 @@ include_once '../GiaoDien/format_price.php';
                 <td>'.$row['ten'].'</td>
                 <td>'.$row['idloai'].'</td>
                 <td>'.$row['soluong'].'</td>
-                <td>'.$row['gia'].'</td>
+                <td>'.currency_format($row['gia']).'</td>
                 <td>'.$row['kieudang'].'</td>
                 <td>'.$row['mausac'].'</td>
                 <td>'.$row['chatlieu'].'</td>

@@ -20,7 +20,7 @@
 	<!-- <link type="text/css" rel="stylesheet" href="css/footer.css"> -->
 	<link type="text/css" rel="stylesheet" href="css/login.css">
 
-    <title>Shop giày</title>
+    <title>Sneaker</title>
 </head>
 
 <body>
@@ -66,4 +66,6 @@
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="store.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </html>
