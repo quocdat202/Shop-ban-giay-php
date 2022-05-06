@@ -2,6 +2,8 @@
 <?php
 include_once '../DataProvider.php';
 include_once '../GiaoDien/format_price.php';
+include_once 'loaisanpham.php';
+
 
     $sql = "SELECT * FROM sanpham WHERE idSP='".$_GET['id']."'";
     $result = DataProvider::executeQuery($sql);
@@ -18,6 +20,7 @@ include_once '../GiaoDien/format_price.php';
             ';
             while($row = mysqli_fetch_array($result))
             {
+            $loai = $row['idloai'];
             echo'
                 <div class="input-group input-group-sm mb-3">
                     <input type="hidden" name="idSP" type="text" class="form-control" value="'.$row['idSP'].'">
@@ -27,8 +30,11 @@ include_once '../GiaoDien/format_price.php';
                     <input name="ten" type="text" class="form-control" aria-label="'.$row['ten'].'" value="'.$row['ten'].'">
                 </div>
                 <div class="input-group input-group-sm mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Mã loại</span>
-                    <input name="idloai" type="text" class="form-control" aria-label="'.$row['idloai'].'" value="'.$row['idloai'].'">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Loại</span>
+                    <select name="idloai" class="form-select" aria-label="Default select example">';
+                    loaisanpham::theloaisp($loai);
+                echo '
+                    </select>
                 </div>
                 <div class="input-group input-group-sm mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-sm">Số lượng</span>

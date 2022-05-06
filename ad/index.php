@@ -141,11 +141,7 @@
         include_once 'pages/ui-features/sản phẩm/suasanpham.php';
 
       else if($_GET['act'] =="delete" || $_GET['act'] == "edit" || $_GET['act'] == "themsanpham"){
-        echo '<script>
-            alert(window.location.href)
-          ;
-
-        </script>'; 
+        
         include_once 'pages/xuly/xulysp.php';
 
 
