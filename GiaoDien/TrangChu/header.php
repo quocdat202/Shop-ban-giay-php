@@ -47,7 +47,7 @@ echo '
         <div class="navi-item">
           <ul>
             <li>
-              <a href="#">
+              <a href="index.php?act=sale">
                 <div class="img-nav">
                   <img src="images/sale.png" />
                 </div>
@@ -107,9 +107,9 @@ echo '
           </ul>
         </div>
         <div class="nav-search">
-          <form class="form-sr">
-            <input class="ip-search" placeholder="Bạn muốn tìm gì..." />
-            <button class="btn btn-search" ><img src="images/search.png" /></button>
+          <form action="index.php?act=search" method="post" class="form-sr">
+            <input class="ip-search" name="search" placeholder="Bạn muốn tìm gì..." />
+            <button type="submit" name="btnsearch" class="btn btn-search" ><img src="images/search.png" /></button>
           </form>
           <div class="phone-order">
             <i class="fa fa-phone phone-icon"></i>

@@ -33,10 +33,13 @@
                 <?php
                         if(isset($_GET['act'])){
                             if ($_GET['act'] == "XemSP")
-                            require_once 'giaodien/TrangChu/center_content.php';
+                                require_once 'giaodien/TrangChu/center_content.php';
+
+                            if($_GET['act'] == "sale")
+                                require_once 'giaodien/SanPham/SanphamSale.php';
                         }
                         else if(!isset($_GET['act']))
-                        require_once 'giaodien/TrangChu/banner.php';
+                            require_once 'giaodien/TrangChu/banner.php';
                     ?>
                     <?php 
                         if (isset($_GET['act'])){
@@ -45,9 +48,15 @@
 
                             else if($_GET['act']== "cart")
                                 require_once 'giaodien/giohang.php';
+                            
+                            else if($_GET['act'] =="search")
+                                require_once 'giaodien/TrangChu/search.php';
                         }
                         else 
                             require_once 'giaodien/TrangChu/center_content.php';
+
+                        if(!isset($_GET['act']))
+                            require_once 'giaodien/SanPham/SanphamSale.php';
 
                         if(!isset($_GET['act']))
                             require_once 'giaodien/TrangChu/trangblog.php';

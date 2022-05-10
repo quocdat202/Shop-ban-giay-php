@@ -929,3 +929,12 @@ h3.title-comm:before {
     border-bottom: 22px solid transparent;
     border-right: 15px solid #0095d6;
 }
+
+
+.item-search {
+    display: flex;
+}
+
+.sanpham-sale {
+    background: white;
+}

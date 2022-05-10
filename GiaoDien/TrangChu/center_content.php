@@ -93,30 +93,9 @@ include_once 'GiaoDien/format_price.php';
                 ';
         echo '</div>';
 
-
-        $sql2 = "SELECT * FROM bannersale WHERE hienthi=1";
-        $result2 = DataProvider::executeQuery($sql2);
-        while($row = mysqli_fetch_array($result2))
-        {
-        echo'
-            <div class="banner-sale">
-                <div class="product-sale pro-it pro-sale">
-                    <img src="images/'.$row['hinhanh'].'">
-                </div>
-            </div>
-        ';
-        }
         
-        echo '<div class="product-sale pro-it">
-                <div class="txt-content">
-                </div>';
-            echo '<div class="item-pro">';
-                    include_once 'GiaoDien/SanPham/SanphamSale.php';
-            echo '</div>';
-            echo '<div class="show-product">
-                </div>
-                ';
-        echo '</div>';
+        // include_once 'GiaoDien/SanPham/SanphamSale.php';
+
     
         
     echo'</div>';
@@ -151,6 +130,35 @@ include_once 'GiaoDien/format_price.php';
             }
             echo'</div>';
         }
+        // else if(isset($_GET['act'])){
+        //     if($_GET['act']=='XemSP'){
+
+        //         $sql2 = "SELECT * FROM bannersale WHERE hienthi=1";
+        //         $result2 = DataProvider::executeQuery($sql2);
+        //         while($row = mysqli_fetch_array($result2))
+        //         {
+        //         echo'
+        //             <div class="banner-sale">
+        //                 <div class="product-sale pro-it pro-sale">
+        //                     <img src="images/'.$row['hinhanh'].'">
+        //                 </div>
+        //             </div>
+        //         ';
+        //         }
+                
+        //         echo '<div class="product-sale pro-it">
+        //                 <div class="txt-content">
+        //                 </div>';
+        //             echo '<div class="item-pro">';
+        //                     include_once 'GiaoDien/SanPham/SanphamSale.php';
+        //             echo '</div>';
+        //             echo '<div class="show-product">
+        //                 </div>
+        //                 ';
+        //         echo '</div>';
+        //     }
+
+        // }
                                     
                               
                                     

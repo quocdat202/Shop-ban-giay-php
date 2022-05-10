@@ -2,6 +2,8 @@
 <?php
 include_once '../DataProvider.php';
 include_once '../GiaoDien/format_price.php';
+include_once 'loaisanpham.php';
+
 
     echo'
         <div class="container">
@@ -21,8 +23,11 @@ include_once '../GiaoDien/format_price.php';
                     <input name="ten" type="text" class="form-control" aria-label="" >
                 </div>
                 <div class="input-group input-group-sm mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Mã loại</span>
-                    <input name="idloai" type="text" class="form-control" aria-label="" >
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Loại</span>
+                    <select name="idloai" class="form-select" aria-label="Default select example">';
+                    loaisanpham::theloaisp1();
+                echo'
+                    </select>
                 </div>
                 <div class="input-group input-group-sm mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-sm">Số lượng</span>
