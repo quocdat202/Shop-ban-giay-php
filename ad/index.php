@@ -159,6 +159,11 @@
       else if($_GET['act'] =="deleteacc" || $_GET['act'] ="edittaikhoan" || $_GET['act'] ="themtaikhoan")
         include_once 'pages/xuly/xylytaikhoan.php';
 
+
+      else if($_GET['act'] =="qldh")
+        include_once 'pages/ui-features/hóa đơn/donhang.php';
+      else if($_GET['act'] =="ctdh")
+      include_once 'pages/ui-features/hóa đơn/ctdh.php';
     }
     
     else if(!isset($_GET['act']))

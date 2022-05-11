@@ -4,12 +4,13 @@
     if(isset($_SESSION['checklogin'])){
         if($_SESSION['checklogin']==1){
             $idDH;
+            $date = date('Y/m/d', time());
     // ==================  insert vào đơn hàng  =============================
             $sql = "insert into donhang(idKH,ngaydathang,tennguoinhan,diachigiaohang,tongtien,trangthai,ghichu)
                     values
                     (
                     '".$_SESSION['iduser']."',
-                    '2022-05-03',
+                    '".$date."',
                     '".$_GET['inf-name']."',
                     '".$_GET['inf-address']."',
                     '".$_GET['total']."',
