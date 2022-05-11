@@ -36,7 +36,7 @@ include_once 'GiaoDien/format_price.php';
         
     }
 
-$sql2 = "SELECT * FROM bannersale WHERE hienthi=1";
+$sql2 = "SELECT * FROM salebanner WHERE hienthi=2";
         $result2 = DataProvider::executeQuery($sql2);
         while($row = mysqli_fetch_array($result2))
         {

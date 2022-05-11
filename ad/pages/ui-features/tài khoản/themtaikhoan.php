@@ -27,7 +27,7 @@ include_once '../GiaoDien/format_price.php';
                 <div class="input-group input-group-sm mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-sm">Quyền</span>
                     <select name="idQuyen" class="form-select" aria-label="Default select example">
-                        <option selected></option>
+                        <option selected>Tùy chọn</option>
                         <option value="1">Admin</option>
                         <option value="2">Nhân viên</option>
                         <option value="3">Khách hàng</option>
