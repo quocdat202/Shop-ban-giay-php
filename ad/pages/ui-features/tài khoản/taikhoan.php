@@ -32,7 +32,7 @@ include_once '../GiaoDien/format_price.php';
               <tr>
                 <td>
                     <a href="index.php?id='.$row['idUser'].'&act=editacc">Sửa</a>
-                    <a href="index.php?id='.$row['idUser'].'&act=deleteacc">Xóa</a>
+                    <a href="index.php?id='.$row['idUser'].'&act=del">Xóa</a>
                 </td>
                 <td>'.$row['idUser'].'</td>
                 <td>'.$row['tendangnhap'].'</td>

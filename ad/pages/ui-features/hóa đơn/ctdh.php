@@ -3,7 +3,7 @@
 include_once '../DataProvider.php';
 include_once '../GiaoDien/format_price.php';
 
-    if(isset($_GET['act']) && isset($_GET['cthd_id'])){
+    if(isset($_GET['action']) && isset($_GET['cthd_id'])){
         $sql = "SELECT idDH,sanpham.idSP,Size,chitietdonhang.soluong,chitietdonhang.gia,hinhanh 
         FROM chitietdonhang,sanpham where idDH = '".$_GET['cthd_id']."' and chitietdonhang.idSP=sanpham.idSP";
         

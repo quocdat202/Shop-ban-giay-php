@@ -160,11 +160,20 @@
         include_once 'pages/xuly/xylytaikhoan.php';
 
 
-      else if($_GET['act'] =="qldh")
-        include_once 'pages/ui-features/hóa đơn/donhang.php';
-      else if($_GET['act'] =="ctdh")
-      include_once 'pages/ui-features/hóa đơn/ctdh.php';
+      // else if($_GET['act'] =="qldh")
+      //   include_once 'pages/ui-features/hóa đơn/donhang.php';
+      // else if($_GET['act'] =="ctdh")
+      //   include_once 'pages/ui-features/hóa đơn/ctdh.php';
     }
+    if(isset($_GET['act'])){
+      if($_GET['act'] == "qldh")
+        include_once 'pages/ui-features/hóa đơn/donhang.php';
+    }
+    if(isset($_GET['action']) && isset($_GET['cthd_id'])){
+      if($_GET['action'] =="ctdh")
+        include_once 'pages/ui-features/hóa đơn/ctdh.php';
+    }
+    
     
     else if(!isset($_GET['act']))
       include_once 'pages/ui-features/content.php';

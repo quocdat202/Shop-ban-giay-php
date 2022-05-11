@@ -1,9 +1,9 @@
 
 <?php
       
-      if(isset($_GET['act']))
+      if(isset($_GET['act']) && isset($_GET['id']))
       {
-          if($_GET['act']=="deleteacc")
+          if($_GET['act']=="del" )
           {
               include_once('../DataProvider.php');
               $sql="Delete from taikhoan where idUser = '".$_GET['id']."' ";
