@@ -48,7 +48,7 @@ include_once '../GiaoDien/format_price.php';
             echo '
               <tr>
                 <td>
-                    <a href="index.php?action=ctdh&cthd_id='.$row['idDH'].'">Xem</a>
+                    <a href="index.php?act=ctdh&cthd_id='.$row['idDH'].'">Xem</a>
                     <a href="pages/ui-features/hóa đơn/xacnhandh.php?xacnhan_id='.$row['idDH'].'&status='.$row['trangthai'].'">
                       Xác nhận
                     </a>
