@@ -1,5 +1,5 @@
 <?php 
-echo '
+echo '<div class="home-tc">
       <section class="ftco-section">
         <div class="container">
             <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light menu-top" id="ftco-navbar">
@@ -122,5 +122,6 @@ echo '
       </div>
       </div>
       </div>
+    </div>
       ';
 ?>

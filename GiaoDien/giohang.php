@@ -32,6 +32,7 @@ $showAddress="";
            </tr>';
            for($i=0;$i < sizeof($_SESSION['giohang']);$i++){
                 $tt=$_SESSION['giohang'][$i][6]*$_SESSION['giohang'][$i][5];
+                $sale = $_SESSION['giohang'][$i][7];
                 $total+=$tt;
                 echo
                 '<tr >
@@ -96,18 +97,31 @@ $showAddress="";
                             <p class="TT-title">Tóm tắt đơn hàng</p>
                             <table>
                                 <tr>
-                                    <td>Thành tiền<td>
-                                    <td class="text-right" >'.currency_format($total).'<td>
+                                    <td>Thành tiền<td>';
+                                    if($sale == 2)
+                                        echo'
+                                    <td class="text-right" >'.currency_format($total*0.65).'<td>';
+                                    else
+                                        echo'
+                                    <td class="text-right" >'.currency_format($total).'<td>';
+                                echo'
                                 <tr>
                                 <tr>
                                     <td>Phí vận chuyển<td>
-                                    <td class="text-right">20.000đ<td>
+                                    <td class="text-right">0đ<td>
                                 <tr>';
-                                $total+=20000;
+                            
                                 echo'
                                 <tr>
-                                    <td>Tổng cộng<td>
-                                    <td class="text-right">'.currency_format($total).'<td>
+                                    <td>Tổng cộng<td>';
+                                    if($sale == 2)
+                                        echo'
+                                        <td class="text-right">'.currency_format($total*0.65).'<td>';
+                                    else
+                                        echo '
+                                        <td class="text-right">'.currency_format($total).'<td>';
+                                echo'
+
                                 <tr>
                             </table>
                             <h3 class="cart-notice1">
