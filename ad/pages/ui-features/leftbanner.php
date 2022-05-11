@@ -29,8 +29,7 @@
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Đơn hàng chờ xử lý</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Đơn hàng đang xử lý</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?act=qldh">Xem Đơn hàng</a></li>
           </ul>
         </div>
       </li>
