@@ -49,6 +49,10 @@
 
                             else if($_GET['act']== "cart")
                                 require_once 'giaodien/giohang.php';
+                            else if($_GET['act']== "history")
+                                require_once 'giaodien/history.php';
+                            else if($_GET['act']== "ctdh")
+                                require_once 'giaodien/historyDetail.php';
                             
                             else if($_GET['act'] =="search")
                                 require_once 'giaodien/TrangChu/search.php';

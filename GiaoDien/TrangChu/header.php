@@ -26,7 +26,7 @@ echo '
                     echo '<li class="nav-item"><a href="GiaoDien/register.php" class="nav-link">Đăng ký</a></li>
                     <li class="nav-item"><a href="GiaoDien/login.php" class="nav-link">Đăng nhập</a></li>';
                     else                
-                    echo '<li class="nav-item"><a href="" class="nav-link">Lịch sử</a></li>
+                    echo '<li class="nav-item"><a href="index.php?act=history" class="nav-link">Lịch sử</a></li>
                     <li class="nav-item"><a href="GiaoDien/XuLy/Logout.php" class="nav-link">Đăng xuất</a></li>';
                     
                 echo '</ul>
