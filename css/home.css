@@ -938,3 +938,16 @@ h3.title-comm:before {
 .sanpham-sale {
     background: white;
 }
+
+.theloai-sanpham {
+    display: flex;
+}
+
+.sort {
+    width: 100%;
+}
+
+.title-theloai {
+    font-size: 25px;
+    font-weight: bold;
+}

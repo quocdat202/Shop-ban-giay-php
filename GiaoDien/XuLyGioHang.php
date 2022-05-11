@@ -6,6 +6,23 @@
             $idDH;
             $date = date('Y/m/d', time());
     // ==================  insert vào đơn hàng  =============================
+        for($i=0;$i < sizeof($_SESSION['giohang']);$i++){
+            $sale = $_SESSION['giohang'][$i][7];
+            if($sale == 2){ 
+            $gia = $_GET['total'] * 0.65;
+            $sql = "insert into donhang(idKH,ngaydathang,tennguoinhan,diachigiaohang,tongtien,trangthai,ghichu)
+                    values
+                    (
+                    '".$_SESSION['iduser']."',
+                    '".$date."',
+                    '".$_GET['inf-name']."',
+                    '".$_GET['inf-address']."',
+                    '".$gia."',
+                    '0',
+                    ''
+                    )";
+            }
+            else
             $sql = "insert into donhang(idKH,ngaydathang,tennguoinhan,diachigiaohang,tongtien,trangthai,ghichu)
                     values
                     (
@@ -17,6 +34,7 @@
                     '0',
                     ''
                     )";
+        }
             $result = DataProvider::executeQuery2($sql);
             $sql2="select * from donhang order by idDH DESC LIMIT 1";
             $result2=DataProvider::executeQuery($sql2);
@@ -24,6 +42,9 @@
             while($row=mysqli_fetch_array($result2))
                 $idDH = $row['idDH'];
                 for($i=0;$i < sizeof($_SESSION['giohang']);$i++){
+                    $sale = $_SESSION['giohang'][$i][7];
+                    if($sale == 2){
+                    $gia = $_SESSION['giohang'][$i][6]*0.65;
                     $sql3="insert into chitietdonhang(idDH,idSP,Size,soluong,gia)
                     values
                     (
@@ -31,8 +52,19 @@
                     '".$_SESSION['giohang'][$i][0]."',
                     '".$_SESSION['giohang'][$i][4]."',
                     '".$_SESSION['giohang'][$i][5]."',
-                    '".$_SESSION['giohang'][$i][6]."'
+                    '".$gia."'
                     )";
+                    }
+                    else
+                        $sql3="insert into chitietdonhang(idDH,idSP,Size,soluong,gia)
+                        values
+                        (
+                        '".$idDH."',
+                        '".$_SESSION['giohang'][$i][0]."',
+                        '".$_SESSION['giohang'][$i][4]."',
+                        '".$_SESSION['giohang'][$i][5]."',
+                        '".$_SESSION['giohang'][$i][6]."'
+                        )";
                     $result3=DataProvider::executeQuery2($sql3);
                 }
     // ==============  Trừ số lượng trng bảng sản phẩm  =============================

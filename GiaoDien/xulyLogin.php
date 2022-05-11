@@ -15,8 +15,11 @@ session_start();
                     header('location:../index.php');
                 }
                     
-                else if($row['idQuyen'] == 1)
+                else if($row['idQuyen'] == 1 || $row['idQuyen'] == 2){
                     header('location:../ad/index.php');
+                    $_SESSION['Quyen'] = $row['idQuyen'];
+                }
+                    
             }
         }
         else

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -126,6 +127,7 @@
     <div class="container-fluid page-body-wrapper">
 
     <?php
+
       include_once 'pages/ui-features/leftbanner.php'
     ?>
 
@@ -140,13 +142,15 @@
       else if($_GET['act'] =="editpro")
         include_once 'pages/ui-features/sản phẩm/suasanpham.php';
 
-      else if($_GET['act'] =="delete" || $_GET['act'] == "edit" || $_GET['act'] == "themsanpham"){
-        
+      else if($_GET['act'] =="delete" || $_GET['act'] == "edit" || $_GET['act'] == "themsanpham")      
         include_once 'pages/xuly/xulysp.php';
 
-
-      }
-
+      else if($_GET['act'] =="qldh")
+        include_once 'pages/ui-features/hóa đơn/donhang.php';
+      else if($_GET['act'] =="ctdh")
+        include_once 'pages/ui-features/hóa đơn/ctdh.php';
+      else if($_GET['act'] == "qldm")
+         include_once 'pages/ui-features/quyền/qlquyen.php';
       else if($_GET['act'] =="qltk")
         include_once 'pages/ui-features/tài khoản/taikhoan.php';
 
@@ -160,19 +164,20 @@
         include_once 'pages/xuly/xylytaikhoan.php';
 
 
-      // else if($_GET['act'] =="qldh")
-      //   include_once 'pages/ui-features/hóa đơn/donhang.php';
-      // else if($_GET['act'] =="ctdh")
-      //   include_once 'pages/ui-features/hóa đơn/ctdh.php';
-    }
-    if(isset($_GET['act'])){
-      if($_GET['act'] == "qldh")
-        include_once 'pages/ui-features/hóa đơn/donhang.php';
-    }
-    if(isset($_GET['action']) && isset($_GET['cthd_id'])){
-      if($_GET['action'] =="ctdh")
+     
+      else if($_GET['act'] =="ctdh")
         include_once 'pages/ui-features/hóa đơn/ctdh.php';
     }
+    // if(isset($_GET['act'])){
+    //   if($_GET['act'] == "qldm")
+    //     include_once 'pages/ui-features/hóa đơn/donhang.php';
+    //   else if($_GET['act'] == "qldm")
+    //     include_once 'pages/ui-features/quyền/qlquyen.php';
+    // }
+    // if(isset($_GET['action']) && isset($_GET['cthd_id'])){
+    //   if($_GET['action'] =="ctdh")
+    //     include_once 'pages/ui-features/hóa đơn/ctdh.php';
+    // }
     
     
     else if(!isset($_GET['act']))

@@ -105,23 +105,28 @@ include_once 'GiaoDien/format_price.php';
     
         else if(isset($_GET['act']) && isset($_GET['idNameSP']))
         {   $ProductUrl='GiaoDien/SanPham/'.strtolower($_GET['idNameSP']).'_panel.php';
-            $tempResult = DataProvider::executeQuery("SELECT * FROM `theloai` where tentheloai = '".$_GET['idNameSP']."'");
+            $tempResult = DataProvider::executeQuery("SELECT * FROM `theloai` where tentheloai = '".$_GET['idNameSP']."' limit 8");
             $rowTheLoai=mysqli_fetch_array($tempResult);
         //  ======== Phân Trang ========
-            $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."'";
+            $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."' limit 8";
             $result = DataProvider::executeQuery($sql);
-            $soSP = 4;
+            $soSP = 8;
             $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
             $vitri = ($_GET['page']-1)*$soSP;
         //  ======= end Phân Trang =======
 
-        echo    '<div class="product-nike pro-it">
-                    <div class="txt-content">
-                        <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
+        echo    '<div class="theloai-sanpham">
+                    <div class="product-nike pro-it">
+                        <div class="title-theloai">
+                            <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
+                        </div>
+                        <div class="item-pro">';
+                        include_once $ProductUrl;
+        echo            '</div>
                     </div>
-                    <div class="item-pro">';
-                    include_once $ProductUrl;
-        echo        '</div>
+                    <div class="sort">
+
+                    </div>
                 </div>
 
             <div class="ProductPage">';
