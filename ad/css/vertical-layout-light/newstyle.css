@@ -9,3 +9,18 @@
 .form-edit {
     width: 100% !important;
 }
+
+.DM-btn {
+    margin-right: 4px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 18px;
+}
+
+.DM-btn:hover {
+    color: #fff;
+    background-color: #4B49AC;
+    transition: 0.3s;
+    border: 1px solid #4B49AC;
+}
