@@ -33,7 +33,11 @@
                     <tr>
                         <td>'.strtoupper($admin['madanhmuc']).'</td>
                         <td>'.$admin['tendanhmuc'].'</td>
-                        <td>X</td>
+                        <td>
+                            <a href="pages/ui-features/quyền/deleteQuyen.php?ma='.$_GET['qldm_q'].'&ten='.$admin['madanhmuc'].'">
+                                X
+                            </a>
+                        </td>
                     </tr>';
                 }
                 echo '
@@ -46,16 +50,18 @@
                 (SELECT danhmuc.madanhmuc FROM `danhmuc`,`q_dm` WHERE danhmuc.madanhmuc=q_dm.madanhmuc and idQuyen=".$_GET['qldm_q'].")";
                 $result2=DataProvider::executeQuery($sql2);
                 echo'<form action="pages/ui-features/quyền/xuliQuyen.php">';
-                while($addDM = mysqli_fetch_array($result2)){
-                    $i=1;
+                $i=1;
+                while($addDM = mysqli_fetch_array($result2)){                 
                     echo'
                     <div>
-                    <input type="checkbox" name="madanhmuc" value="'.$addDM['madanhmuc'].'">
+                    <input type="checkbox" name="madanhmuc_'.$i.'" value="'.$addDM['madanhmuc'].'">
                     <label>'.$addDM['tendanhmuc'].'</label>
                     </div>';
                     $i++;
                 }
                 echo'<input type="submit" value="Thêm" class="DM-btn">
+                <input type="hidden" value="'.$i.'" name="SL_input" class="DM-btn">
+                <input type="hidden" value="'.$_GET['qldm_q'].'" name="ID_quyen" class="DM-btn">
                 </form>';
             }
             echo '</div>';      
