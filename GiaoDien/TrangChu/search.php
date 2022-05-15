@@ -9,10 +9,13 @@ include_once 'GiaoDien/format_price.php';
         
      $sql="
      SELECT * FROM sanpham
-     WHERE ten like '%$item%' limit 4
+     WHERE ten like '%$item%'
      ";
      $result = DataProvider::executeQuery($sql);
     //  echo '<script> location.replace("index.php?act=qlsp"); </script>';
+    $soSP = 4;
+    $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
+    $vitri = ($_GET['page']-1)*$soSP;
     echo '<div class="item-search">';
     while($row = mysqli_fetch_array($result))
         {
@@ -37,5 +40,11 @@ include_once 'GiaoDien/format_price.php';
                 ';
         }
     echo '</div>';
+    echo'
+    <div class="ProductPage">';
+            for($i=1;$i<=$totalPage;$i++){
+            echo'<a href="">'.$i.'</a>';
+            }
+    echo'</div>';
      }
 ?>

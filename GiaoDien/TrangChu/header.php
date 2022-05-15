@@ -8,7 +8,7 @@ echo '<div class="home-tc">
                 <div class="social-media order-lg-last">
                     <p class="mb-0 d-flex">
                         <a href="https://www.facebook.com/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-                        <a href="mailto:mwcshop@gmail.com class="d-flex align-items-center justify-content-center"><span class="fa fa-envelope gmail"><i class="sr-only">Gmail</i></span></a>
+                        <a href="mailto:mwcshop@gmail.com" class="d-flex align-items-center justify-content-center"><span class="fa fa-envelope"><i class="sr-only">Gmail</i></span></a>
                         <a href="https://www.instagram.com/" target="_blank" ta class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
                         <a href="https://www.youtube.com/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-youtube"><i class="sr-only">Dribbble</i></span></a>
                     </p>
@@ -107,7 +107,7 @@ echo '<div class="home-tc">
           </ul>
         </div>
         <div class="nav-search">
-          <form action="index.php?act=search" method="post" class="form-sr">
+          <form action="index.php?act=search&page=1" method="post" class="form-sr">
             <input class="ip-search" name="search" placeholder="Bạn muốn tìm gì..." />
             <button type="submit" name="btnsearch" class="btn btn-search" ><img src="images/search.png" /></button>
           </form>
