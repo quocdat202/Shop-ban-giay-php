@@ -608,9 +608,7 @@ body {
     padding: 0 10px;
 }
 
-.vi-header {
-    /* border-bottom: solid 1px #0056a8; */
-}
+
 
 .pull-right {
     float: right;
@@ -933,6 +931,7 @@ h3.title-comm:before {
 
 .item-search {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .sanpham-sale {
@@ -950,4 +949,32 @@ h3.title-comm:before {
 .title-theloai {
     font-size: 25px;
     font-weight: bold;
+}
+
+.Pro-content-page {
+    border-radius: 6px;
+    padding: 0px 8px;
+    font-size: 20px;
+    background: #fff;
+    color: #000000 !important;
+    font-weight: 600;
+    margin: 4px;
+    border: 1px solid #000;
+}
+
+.Pro-content-page:hover {
+    background: #000000;
+    color: #fff !important;
+    border: 1px solid #000;
+}
+
+.Pro-content-page-2 {
+    border-radius: 6px;
+    padding: 0px 8px;
+    font-size: 20px;
+    background: #000000;
+    color: #fff !important;
+    font-weight: 600;
+    margin: 4px;
+    border: 1px solid #000;
 }

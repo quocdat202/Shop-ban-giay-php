@@ -108,7 +108,7 @@ include_once 'GiaoDien/format_price.php';
             $tempResult = DataProvider::executeQuery("SELECT * FROM `theloai` where tentheloai = '".$_GET['idNameSP']."' limit 8");
             $rowTheLoai=mysqli_fetch_array($tempResult);
         //  ======== Phân Trang ========
-            $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."' limit 8";
+            $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."' ";
             $result = DataProvider::executeQuery($sql);
             $soSP = 8;
             $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
@@ -124,14 +124,14 @@ include_once 'GiaoDien/format_price.php';
                         include_once $ProductUrl;
         echo            '</div>
                     </div>
-                    <div class="sort">
-
-                    </div>
                 </div>
 
             <div class="ProductPage">';
             for($i=1;$i<=$totalPage;$i++){
-            echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'">'.$i.'</a>';
+            if($_GET['page']!=$i)
+                echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'" class="Pro-content-page">'.$i.'</a>';
+            else
+                echo '<a class="Pro-content-page-2">'.$i.'</a>';
             }
             echo'</div>';
         }

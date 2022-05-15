@@ -108,7 +108,8 @@ echo '<div class="home-tc">
         </div>
         <div class="nav-search">
           <form action="index.php?act=search" method="post" class="form-sr">
-            <input class="ip-search" name="search" placeholder="Bạn muốn tìm gì..." />
+          <input type="hidden" name="page" value="1" />
+            <input class="ip-search" name="query" placeholder="Bạn muốn tìm gì..." />
             <button type="submit" name="btnsearch" class="btn btn-search" ><img src="images/search.png" /></button>
           </form>
           <div class="phone-order">

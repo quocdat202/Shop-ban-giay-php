@@ -5,16 +5,26 @@ include_once 'GiaoDien/format_price.php';
      {
          include_once('DataProvider.php');
 
-         $item = $_POST['search'];
+         $item = $_POST['query'];
         
      $sql="
      SELECT * FROM sanpham
-     WHERE ten like '%$item%' limit 4
-     ";
+     WHERE ten like '%$item%' 
+     "; 
      $result = DataProvider::executeQuery($sql);
-    //  echo '<script> location.replace("index.php?act=qlsp"); </script>';
+     //  ======== Phân Trang ========
+     $soSP = 16;
+     $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
+     $vitri = ($_POST['page']-1)*$soSP;
+     $sql2="
+     SELECT * FROM sanpham
+     WHERE ten like '%$item%' LIMIT ".$vitri.",".$soSP
+     ; 
+     $result2 = DataProvider::executeQuery($sql2);
+     //  ======== End Phân Trang ========
+
     echo '<div class="item-search">';
-    while($row = mysqli_fetch_array($result))
+    while($row = mysqli_fetch_array($result2))
         {
             echo '
                     
@@ -37,5 +47,18 @@ include_once 'GiaoDien/format_price.php';
                 ';
         }
     echo '</div>';
+    if($totalPage>1){
+        echo'<form action="index.php?act=search" method="post" class="ProductPage">';
+            for($i=1;$i<=$totalPage;$i++){
+                if($_POST['page']!=$i)
+                echo'<button type="submit" name="page" value="'.$i.'" class="Pro-content-page">'.$i.'</button>';
+                else
+                echo'<button class="Pro-content-page-2">'.$i.'</button>';
+            }
+            echo'<input type="hidden" name="btnsearch" value="'.$i.'" />
+                <input type="hidden" name="query" value="'.$item.'" />
+            </form>';
+    }
+    
      }
 ?>
