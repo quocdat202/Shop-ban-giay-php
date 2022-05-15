@@ -4,7 +4,7 @@ include_once 'GiaoDien/format_price.php';
 if(!isset($_GET['act']) && !isset($_GET['idNameSP']))
     $sql = "SELECT * FROM sanpham WHERE idloai=5 AND hienthi=1 LIMIT 4";
 else if($_GET['act']=="XemSP" && $_GET['idNameSP']=="Balenciaga")
-    $sql = "SELECT * FROM sanpham WHERE idloai=5";
+    $sql = "SELECT * FROM sanpham WHERE idloai=5 LIMIT ".$vitri.",".$soSP;
 $result = DataProvider::executeQuery($sql);
 
         while($row = mysqli_fetch_array($result))

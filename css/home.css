@@ -238,7 +238,7 @@ body {
     font-weight: 400;
     font-family: Roboto, serif;
     margin: 0;
-    height: 20px;
+    height: auto;
 }
 
 .product-price p {
@@ -947,6 +947,10 @@ h3.title-comm:before {
 }
 
 .title-theloai {
+    display: flex;
+}
+
+.title-theloai p {
     font-size: 25px;
     font-weight: bold;
 }
@@ -977,4 +981,8 @@ h3.title-comm:before {
     font-weight: 600;
     margin: 4px;
     border: 1px solid #000;
+}
+
+.title-theloai span {
+    float: right;
 }

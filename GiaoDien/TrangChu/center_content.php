@@ -105,23 +105,47 @@ include_once 'GiaoDien/format_price.php';
     
         else if(isset($_GET['act']) && isset($_GET['idNameSP']))
         {   $ProductUrl='GiaoDien/SanPham/'.strtolower($_GET['idNameSP']).'_panel.php';
-            $tempResult = DataProvider::executeQuery("SELECT * FROM `theloai` where tentheloai = '".$_GET['idNameSP']."' limit 8");
+            $tempResult = DataProvider::executeQuery("SELECT * FROM `theloai` where tentheloai = '".$_GET['idNameSP']."' ");
             $rowTheLoai=mysqli_fetch_array($tempResult);
+
+            
         //  ======== Phân Trang ========
-            $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."' ";
+            $GLOBALS['theloai'] = $rowTheLoai['idloai'];
+            $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."'";
             $result = DataProvider::executeQuery($sql);
-            $soSP = 8;
+            $soSP = 16;
             $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
             $vitri = ($_GET['page']-1)*$soSP;
+
+            
         //  ======= end Phân Trang =======
 
         echo    '<div class="theloai-sanpham">
                     <div class="product-nike pro-it">
                         <div class="title-theloai">
                             <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
-                        </div>
+                        </div>                  
+                        <div>
+                            <span>Sắp xếp theo:</span>
+                            <form action="" method="POST">
+                                <select onchange="this.form.submit()" name="sortpro" class="form-select" aria-label="Default select example">
+                                    <option selected>Tùy chọn</option>
+                                    <option value="ASC">Giá tăng dần</option>
+                                    <option value="DESC">Giá giảm dần</option>
+                                </select>
+                            </form>
+                            </div>
                         <div class="item-pro">';
-                        include_once $ProductUrl;
+                        if(isset($_POST['sortpro'])){
+                            if($_POST['sortpro']=='ASC'){
+                
+                                prosort($_POST['sortpro']);
+                                }
+                            if($_POST['sortpro']=='DESC'){
+                                prosort($_POST['sortpro']);
+                            }
+                        }
+                        else include_once $ProductUrl;
         echo            '</div>
                     </div>
                 </div>
@@ -134,7 +158,34 @@ include_once 'GiaoDien/format_price.php';
                 echo '<a class="Pro-content-page-2">'.$i.'</a>';
             }
             echo'</div>';
+            
         }
+        function prosort($sort){
+            $data = "SELECT idSP,gia,hinhanh,ten FROM sanpham WHERE idloai='".$GLOBALS['theloai']."' ORDER BY gia $sort";
+            $result3 = DataProvider::executeQuery($data);
+            while($row = mysqli_fetch_array($result3))
+            {
+                echo '
+                            <div class="product-item">
+                                <div class="pro-item">
+                                    <a href="index.php?id='.$row['idSP'].'&act=detailproduct">
+                                        <div class="product-image">
+                                                <img src="images/'.$row['hinhanh'].'" />
+                                        </div>
+                                        <div class="product-name">
+                                            <p>'.$row['ten'].'</p>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>'.currency_format($row['gia']).'</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                    ';
+            }
+    }
+        
+        
         // else if(isset($_GET['act'])){
         //     if($_GET['act']=='XemSP'){
 

@@ -8,7 +8,7 @@ echo '<div class="home-tc">
                 <div class="social-media order-lg-last">
                     <p class="mb-0 d-flex">
                         <a href="https://www.facebook.com/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-                        <a href="mailto:mwcshop@gmail.com class="d-flex align-items-center justify-content-center"><span class="fa fa-envelope gmail"><i class="sr-only">Gmail</i></span></a>
+                        <a href="mailto:mwcshop@gmail.com" class="d-flex align-items-center justify-content-center"><span class="fa fa-envelope"><i class="sr-only">Gmail</i></span></a>
                         <a href="https://www.instagram.com/" target="_blank" ta class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
                         <a href="https://www.youtube.com/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-youtube"><i class="sr-only">Dribbble</i></span></a>
                     </p>
