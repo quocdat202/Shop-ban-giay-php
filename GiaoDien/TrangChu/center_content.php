@@ -124,7 +124,7 @@ include_once 'GiaoDien/format_price.php';
                     <div class="product-nike pro-it">
                         <div class="title-theloai">
                             <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
-                            <span>Sắp xếp theo:</span>
+                            <span>Sắp xếp theo:</span>&nbsp
                             <form action="" method="POST">
                                 <select onchange="this.form.submit()" name="sortpro" class="form-select" aria-label="Default select example">
                                     <option selected>Tùy chọn</option>

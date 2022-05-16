@@ -1,3 +1,2 @@
-<?php
-    echo "thống kê";
-?>
+
+<div id="chart" style="height: 250px;"></div>
