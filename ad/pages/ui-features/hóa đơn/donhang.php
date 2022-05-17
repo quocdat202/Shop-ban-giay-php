@@ -56,7 +56,9 @@ include_once '../GiaoDien/format_price.php';
             ';
             while($row = mysqli_fetch_array($result))
             {
+              echo json_encode($row);
             echo '
+            
               <tr>
                 <td>
                     <a href="index.php?act=ctdh&cthd_id='.$row['idDH'].'">Xem</a>
