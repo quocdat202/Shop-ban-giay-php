@@ -5,7 +5,7 @@ include_once '../GiaoDien/format_price.php';
     $string="";
     if(!isset($_GET['date_1']) && !isset($_GET['date_2']))
       $sql = "SELECT * FROM donhang ";
-    else if(isset($_GET['date_1']) && isset($_GET['date_2'])){
+    else if(isset($_GET['date_1']) && isset($_GET['date_2']) && $_GET['act']='qldh'){
       $sql = "SELECT * FROM donhang where ngaydathang between '".$_GET['date_1']."' and '".$_GET['date_2']."'";
       $string ="&date_1=".$_GET['date_1']."&date_2=".$_GET['date_2'];
     }

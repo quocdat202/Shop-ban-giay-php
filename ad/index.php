@@ -153,6 +153,8 @@
          include_once 'pages/ui-features/quyền/qlquyen.php';
       else if($_GET['act'] =="qltk")
         include_once 'pages/ui-features/tài khoản/taikhoan.php';
+      else if($_GET['act'] =="thongke")
+        include_once 'pages/ui-features/Thống kê/thongkesp.php';
 
       else if($_GET['act'] =="themtk")
         include_once 'pages/ui-features/tài khoản/themtaikhoan.php';
