@@ -34,11 +34,13 @@
                             <p class="color-pro">Màu sắc: '.$row['mausac'].'</p>
                             <div class="ct-right-size">
                                 <p class="color-pro">Size: </p>
+                                <div>
                                     <input name="checkbox" type="radio" value="36" />36
                                     <input name="checkbox" type="radio" value="37" />37
                                     <input name="checkbox" type="radio" value="38" />38
                                     <input name="checkbox" type="radio" value="39" />39
                                     <input name="checkbox" type="radio" value="40" />40
+                                </div>
                             </div>
                             <p class="color-pro">Số lượng:</p>
                             <input name="soluong" type="number" value="1" min="1" max="10" >
@@ -129,7 +131,8 @@
         var check3=arr[3].checked ;
         var check4=arr[4].checked ;
         var check5=arr[5].checked ;
-        if(check1||check2||check3||check4||check5)
+        var check6=arr[6].checked ;
+        if(check1||check2||check3||check4||check5||check6)
         return true;
         else{
             alert("Vui lòng chọn size ");

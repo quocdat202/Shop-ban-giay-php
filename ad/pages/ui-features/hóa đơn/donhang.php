@@ -57,12 +57,18 @@ include_once '../GiaoDien/format_price.php';
             while($row = mysqli_fetch_array($result))
             {
             echo '
+            
               <tr>
                 <td>
-                    <a href="index.php?act=ctdh&cthd_id='.$row['idDH'].'">Xem</a>
+                    <a href="index.php?act=ctdh&cthd_id='.$row['idDH'].'">Xem</a>';
+                    if($row['trangthai']==1)
+                      echo '';
+                    else
+                      echo' 
                     <a href="pages/ui-features/hóa đơn/xacnhandh.php?xacnhan_id='.$row['idDH'].'&status='.$row['trangthai'].'">
-                      Xác nhận
-                    </a>
+                    Xác nhận
+                  </a>';
+                echo'
                 </td>
                 <td>DH0'.$row['idDH'].'</td>
                 <td>KH0'.$row['idKH'].'</td>
