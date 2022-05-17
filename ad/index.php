@@ -60,6 +60,8 @@
         include_once 'pages/ui-features/tài khoản/taikhoan.php';
       else if($_GET['act'] =="thongke")
         include_once 'pages/ui-features/Thống kê/thongkesp.php';
+      else if($_GET['act'] =="tkkd")
+        include_once 'pages/ui-features/Thống kê/thongkekinhdoanh.php';
 
       else if($_GET['act'] =="themtk")
         include_once 'pages/ui-features/tài khoản/themtaikhoan.php';
