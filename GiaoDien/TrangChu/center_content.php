@@ -107,13 +107,17 @@ include_once 'GiaoDien/format_price.php';
         {   $ProductUrl='GiaoDien/SanPham/'.strtolower($_GET['idNameSP']).'_panel.php';
             $tempResult = DataProvider::executeQuery("SELECT * FROM `theloai` where tentheloai = '".$_GET['idNameSP']."' ");
             $rowTheLoai=mysqli_fetch_array($tempResult);
-
+            $sql;
             
         //  ======== Phân Trang ========
             $GLOBALS['theloai'] = $rowTheLoai['idloai'];
+
+            if(isset($_GET['sortpro']))
+            $sql=prosort($_GET['sortpro']);
+            else
             $sql="SELECT * FROM sanpham WHERE idloai='".$rowTheLoai['idloai']."'";
             $result = DataProvider::executeQuery($sql);
-            $soSP = 8;
+            $soSP = 16;
             $totalPage=ceil(mysqli_num_rows($result)/$soSP) ;
             $vitri = ($_GET['page']-1)*$soSP;
 
@@ -124,64 +128,46 @@ include_once 'GiaoDien/format_price.php';
                     <div class="product-nike pro-it">
                         <div class="title-theloai">
                             <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
-                            <span>Sắp xếp theo:</span>&nbsp
-                            <form action="" method="POST">
+                        </div>                  
+                        <div>
+                            <span>Sắp xếp theo:</span>
+                            <form action="index.php" method="GET">
+                                <input type="hidden" name="idNameSP" value="'.$_GET['idNameSP'].'">
+                                <input type="hidden" name="act" value="XemSP">
+                                <input type="hidden" name="page" value="1">
                                 <select onchange="this.form.submit()" name="sortpro" class="form-select" aria-label="Default select example">
                                     <option selected>Tùy chọn</option>
                                     <option value="ASC">Giá tăng dần</option>
                                     <option value="DESC">Giá giảm dần</option>
                                 </select>
                             </form>
-                        </div>
+                            </div>
                         <div class="item-pro">';
-                        if(isset($_POST['sortpro'])){
-                            if($_POST['sortpro']=='ASC'){
-                
-                                prosort($_POST['sortpro']);
-                                }
-                            if($_POST['sortpro']=='DESC'){
-                                prosort($_POST['sortpro']);
-                            }
-                        }
-                        else include_once $ProductUrl;
+                        include_once $ProductUrl;
         echo            '</div>
                     </div>
-                    <div class="sort">
+                </div>';
 
-                    </div>
-                </div>
-
-            <div class="ProductPage">';
-            for($i=1;$i<=$totalPage;$i++){
-            echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'">'.$i.'</a>';
-            }
-            echo'</div>';
+                echo'<div class="ProductPage">';
+                for($i=1;$i<=$totalPage;$i++){
+                if($_GET['page']!=$i){
+                    if(isset($_GET['sortpro']))
+                    echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'&sortpro='.$_GET['sortpro'].'" class="Pro-content-page">'.$i.'</a>';
+                    else
+                    echo'<a href="index.php?idNameSP='.$_GET['idNameSP'].'&act=XemSP&page='.$i.'" class="Pro-content-page">'.$i.'</a>';
+                }
+                    
+                else
+                    echo '<a class="Pro-content-page-2">'.$i.'</a>';
+                }
+                echo'</div>';
             
         }
         function prosort($sort){
             $data = "SELECT idSP,gia,hinhanh,ten FROM sanpham WHERE idloai='".$GLOBALS['theloai']."' ORDER BY gia $sort";
-            $result3 = DataProvider::executeQuery($data);
-            while($row = mysqli_fetch_array($result3))
-            {
-                echo '
-                            <div class="product-item">
-                                <div class="pro-item">
-                                    <a href="index.php?id='.$row['idSP'].'&act=detailproduct">
-                                        <div class="product-image">
-                                                <img src="images/'.$row['hinhanh'].'" />
-                                        </div>
-                                        <div class="product-name">
-                                            <p>'.$row['ten'].'</p>
-                                        </div>
-                                        <div class="product-price">
-                                            <p>'.currency_format($row['gia']).'</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                    ';
-            }
+            return $data;
     }
+        
         
         
         // else if(isset($_GET['act'])){

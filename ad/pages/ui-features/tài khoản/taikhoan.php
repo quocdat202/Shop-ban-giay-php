@@ -4,8 +4,15 @@ include_once '../DataProvider.php';
 include_once '../GiaoDien/format_price.php';
 
     $sql = "SELECT * FROM taikhoan ";
-    $result = DataProvider::executeQuery($sql);
-
+    $sort="ASC";
+    if(isset($_GET['sort'])){
+      if($_GET['sort']=="ASC")
+        $sort="DESC";
+      else
+        $sort="ASC";
+      $sql=$sql."Order by ".$_GET['col']." ".$sort;
+    }
+    $result = DataProvider::executeQuery($sql);  
     echo'
         <div class="container">
             <div class="row">
@@ -18,10 +25,10 @@ include_once '../GiaoDien/format_price.php';
             <thead>
               <tr>
                 <th scope="col">Hành động</th>
-                <th scope="col">Mã tài khoản</th>
-                <th scope="col">Tên đăng nhập</th>
-                <th scope="col">Mật khẩu</th>
-                <th scope="col">Quyền</th>
+                <th scope="col"><a href="index.php?act=qltk&sort='.$sort.'&col=idUser">Mã tài khoản</a></th>
+                <th scope="col"><a href="index.php?act=qltk&sort='.$sort.'&col=tendangnhap">Tên đăng nhập</a></th>
+                <th scope="col"><a href="index.php?act=qltk&sort='.$sort.'&col=matkhau">Mật khẩu</a></th>
+                <th scope="col"><a href="index.php?act=qltk&sort='.$sort.'&col=idQuyen">Quyền</a></th>
               </tr>
             </thead>
             <tbody>

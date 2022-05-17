@@ -2,10 +2,21 @@
 <?php
 include_once '../DataProvider.php';
 include_once '../GiaoDien/format_price.php';
+    $string="";
     if(!isset($_GET['date_1']) && !isset($_GET['date_2']))
       $sql = "SELECT * FROM donhang ";
-    else if(isset($_GET['date_1']) && isset($_GET['date_2']))
+    else if(isset($_GET['date_1']) && isset($_GET['date_2'])){
       $sql = "SELECT * FROM donhang where ngaydathang between '".$_GET['date_1']."' and '".$_GET['date_2']."'";
+      $string ="&date_1=".$_GET['date_1']."&date_2=".$_GET['date_2'];
+    }
+      $sort="ASC";
+      if(isset($_GET['sort'])){
+        if($_GET['sort']=="ASC")
+          $sort="DESC";
+        else
+          $sort="ASC";
+        $sql=$sql."Order by ".$_GET['col']." ".$sort;
+      }
     $result = DataProvider::executeQuery($sql);
 
     echo'
@@ -20,7 +31,7 @@ include_once '../GiaoDien/format_price.php';
             echo '<p>Đơn hàng từ ngày '.$_GET['date_1'].' đến ngày '.$_GET['date_2'].'</p>';
             echo'
             <div class="DH-input-date">
-            <form action="index.php?act=qldh" onsubmit="return checkdate();">
+            <form action="index.php?act=qldh" method="GET" onsubmit="return checkdate();">
               <input type="date" id="date_1" name="date_1">
               <input type="date" id="date_2" name="date_2">
               <input type="hidden" name="act" value="qldh">
@@ -32,13 +43,13 @@ include_once '../GiaoDien/format_price.php';
             <thead>
               <tr>
                 <th scope="col">Hành động</th>
-                <th scope="col">Mã ĐH</th>
-                <th scope="col">Mã KH</th>
-                <th scope="col">Ngày đặt hàng</th>
-                <th scope="col">Tên người nhận</th>
-                <th scope="col">Địa chỉ</th>
-                <th scope="col">Tổng hóa đơn</th>
-                <th scope="col">Trạng thái</th>
+                <th scope="col"><a href="index.php?act=qldh&col=idDH&sort='.$sort.''.$string.'">Mã ĐH</a></th>
+                <th scope="col"><a href="index.php?act=qldh&col=idKH&sort='.$sort.''.$string.'">Mã KH</a></th>
+                <th scope="col"><a href="index.php?act=qldh&col=ngaydathang&sort='.$sort.''.$string.'">Ngày đặt hàng</a></th>
+                <th scope="col"><a href="index.php?act=qldh&col=tennguoinhan&sort='.$sort.''.$string.'">Tên người nhận</a></th>
+                <th scope="col"><a href="index.php?act=qldh&col=diachigiaohang&sort='.$sort.''.$string.'">Địa chỉ</a></th>
+                <th scope="col"><a href="index.php?act=qldh&col=tongtien&sort='.$sort.''.$string.'">Tổng hóa đơn</a></th>
+                <th scope="col"><a href="index.php?act=qldh&col=trangthai&sort='.$sort.''.$string.'">Trạng thái</a></th>
               </tr>
             </thead>
             <tbody>
