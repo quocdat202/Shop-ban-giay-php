@@ -16,9 +16,9 @@
     echo'
     
         <div class="container">
-            <div class="row">
+            <div class="row title-table-row">
                 <div class="title">
-                    <p>THỐNG KÊ KINH DOANH</p>
+                    <p class="p-table-row">THỐNG KÊ KINH DOANH</p>
                 </div>
             </div>
             <div class="DH-input-date">

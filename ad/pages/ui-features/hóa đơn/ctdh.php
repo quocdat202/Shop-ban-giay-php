@@ -33,7 +33,7 @@ include_once '../GiaoDien/format_price.php';
             {
             echo '
               <tr>
-                <td>'.$row['hinhanh'].'</td>
+                <td><img class="cart-img" src="../images/'.$row['hinhanh'].'"/></td>
                 <td>DH0'.$row['idDH'].'</td>
                 <td>KH0'.$row['idSP'].'</td>
                 <td>'.$row['Size'].'</td>

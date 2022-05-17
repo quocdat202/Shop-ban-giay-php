@@ -15,9 +15,9 @@ include_once '../GiaoDien/format_price.php';
     $result = DataProvider::executeQuery($sql);  
     echo'
         <div class="container">
-            <div class="row">
+            <div class="row title-table-row">
                 <div class="title">
-                    <p>Quản lý tài khoản</p>
+                    <p class="p-table-row">Quản lý tài khoản</p>
                 </div>
             </div>
             <div class="row table-sp">

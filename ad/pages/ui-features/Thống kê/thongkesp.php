@@ -13,23 +13,23 @@
     if(isset($_GET['top'])){
         $top = " Limit ".$_GET['top'];
     }
-    $sql = "SELECT sanpham.ten ,hinhanh,sanpham.gia,donhang.ngaydathang,tentheloai,chitietdonhang.idSP,sum(chitietdonhang.soluong)
+    $sql = "SELECT sanpham.ten ,hinhanh,sanpham.gia,tentheloai,chitietdonhang.idSP,sum(chitietdonhang.soluong)
      FROM `chitietdonhang`,`donhang`,`sanpham`,`theloai` WHERE sanpham.idloai=theloai.idloai and chitietdonhang.idSP=sanpham.idSP
       and chitietdonhang.idDH=donhang.idDH ".$date." GROUP by idSP ORDER by sum(chitietdonhang.soluong) desc".$top;
     $result = DataProvider::executeQuery($sql);
     echo'
     
         <div class="container">
-            <div class="row">
+            <div class="row title-table-row">
                 <div class="title">
-                    <p>Thong ke san pham</p>
+                    <p class="p-table-row">THỐNG KÊ SẢN PHẨM BÁN CHẠY</p>
                 </div>
             </div>
             <div class="DH-input-date">
             <form action="index.php?act=thongke" method="GET" onsubmit="return checkdate();">
             <div>
-                <label>Top san pham ban chay</label>
-                <input type="number" name="top" value="5"></input>
+                <label>Top sản phẩm bán chạy</label>
+                <input type="number" name="top" value="10"></input>
             </div>
               <input type="date" id="date_1" name="date_1">
               <input type="date" id="date_2" name="date_2">
@@ -41,13 +41,12 @@
             <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col">TenSP</th>
-                <th scope="col">Hinh anh</th>
-                <th scope="col">gia</th>
-                <th scope="col">Ngay dat hang</th>
-                <th scope="col">Ten the loai</th>
-                <th scope="col">idSP</th>
-                <th scope="col">So Luong</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">ID sản phẩm</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Thể loại</th>
+                <th scope="col">Giá</th>
+                <th scope="col">Số lượng</th>
               </tr>
             </thead>
             <tbody>
@@ -56,13 +55,11 @@
             {
             echo '
               <tr>
-                
+                <td><img class="cart-img" src="../images/'.$row['hinhanh'].'"/></td>
+                <td>'.$row['idSP'].'</td>   
                 <td>'.$row['ten'].'</td>
-                <td>'.$row['hinhanh'].'</td>
-                <td>'.currency_format($row['gia']).'</td>
-                <td>'.$row['ngaydathang'].'</td>
-                <td>'.$row['tentheloai'].'</td>
-                <td>'.$row['idSP'].'</td>    
+                <td>'.strtoupper($row['tentheloai']).'</td>
+                <td>'.currency_format($row['gia']).'</td>            
                 <td>'.$row['sum(chitietdonhang.soluong)'].'</td>           
               </tr>
               ';

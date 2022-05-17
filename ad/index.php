@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sneaker Admin</title>
   <!-- plugins:css -->
+  <link rel="stylesheet" href="newcss.css">
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -27,6 +28,16 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 </head>
 <body>
+  <?php
+    if(!isset($_SESSION['Quyen']))
+    echo '<div style="margin-top:20px">
+      <p style="color:red;text-align:center;font-size:34px">BẠN KHÔNG ĐƯỢC CẤP QUYỀN VÀO ĐÂY !!!</p>
+      </div>
+      <div style="margin-top:20px;display:flex;justify-content: center;">
+      <a href="../index.php" >QUAY LẠI</a>
+      </div>';
+  ?>
+  
   <div class="container-scroller">
    
     <div class="container-fluid page-body-wrapper">
@@ -37,6 +48,7 @@
     ?>
 
     <?php
+    if(isset($_SESSION['Quyen'])){
     if(isset($_GET['act'])){
       if($_GET['act'] == "qlsp")
         include_once 'pages/ui-features/sản phẩm/sanpham.php';
@@ -78,20 +90,15 @@
       else if($_GET['act'] =="ctdh")
         include_once 'pages/ui-features/hóa đơn/ctdh.php';
     }
-    // if(isset($_GET['act'])){
-    //   if($_GET['act'] == "qldm")
-    //     include_once 'pages/ui-features/hóa đơn/donhang.php';
-    //   else if($_GET['act'] == "qldm")
-    //     include_once 'pages/ui-features/quyền/qlquyen.php';
-    // }
-    // if(isset($_GET['action']) && isset($_GET['cthd_id'])){
-    //   if($_GET['action'] =="ctdh")
-    //     include_once 'pages/ui-features/hóa đơn/ctdh.php';
-    // }
-    
-    
     else if(!isset($_GET['act']))
       include_once 'pages/ui-features/content.php';
+  }
+  else
+    echo '<div style="margin-top:20px;text-align:center">
+    </div>';
+    
+    
+    
   ?>
 
 

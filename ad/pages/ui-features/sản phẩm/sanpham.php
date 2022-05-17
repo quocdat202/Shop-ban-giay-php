@@ -8,9 +8,9 @@ include_once '../GiaoDien/format_price.php';
 
     echo'
         <div class="container">
-            <div class="row">
+            <div class="row title-table-row">
                 <div class="title">
-                    <p>Quản lý sản phẩm</p>
+                    <p class="p-table-row">Quản lý sản phẩm</p>
                 </div>
             </div>
             <div class="row table-sp">

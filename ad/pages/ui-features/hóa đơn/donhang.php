@@ -22,9 +22,9 @@ include_once '../GiaoDien/format_price.php';
     echo'
     
         <div class="container">
-            <div class="row">
+            <div class="row title-table-row">
                 <div class="title">
-                    <p>Quản lý đơn hàng</p>
+                    <p class="p-table-row">QUẢN LÍ ĐƠN HÀNG</p>
                 </div>
             </div>';
             if(isset($_GET['date_1']) && isset($_GET['date_2']))
