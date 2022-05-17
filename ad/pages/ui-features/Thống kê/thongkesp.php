@@ -59,7 +59,7 @@
                 
                 <td>'.$row['ten'].'</td>
                 <td>'.$row['hinhanh'].'</td>
-                <td>'.$row['gia'].'</td>
+                <td>'.currency_format($row['gia']).'</td>
                 <td>'.$row['ngaydathang'].'</td>
                 <td>'.$row['tentheloai'].'</td>
                 <td>'.$row['idSP'].'</td>    
@@ -70,7 +70,6 @@
             echo '
             </tbody>
           </table>
-            </div>
         </div>
     ';
 ?>
