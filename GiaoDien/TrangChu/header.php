@@ -38,75 +38,84 @@ echo '<div class="home-tc">
     echo'
      <div class="container center-pg">
       <div class="center-page">
-      <div class="logo-nav">
-        <a href="index.php">
-          <img src="images/logo.png" alt="logo" />
-        </a>
-      </div>
-      <div class="menu-nav">
-        <div class="navi-item">
-          <ul>
-            <li>
-              <a href="index.php?act=sale">
-                <div class="img-nav">
-                  <img src="images/sale.png" />
-                </div>
-                <p>Siêu Sale</p>
+        <div class="top-mn">
+            <div class="logo-nav">
+              <a href="index.php">
+                <img src="images/logo.png" alt="logo" />
               </a>
-            </li>
-            <li>
-              <a href="index.php?idNameSP=Nike&act=XemSP&page=1">
-                <div class="img-nav">
-                  <img src="images/nike.png" />
-                </div>
-                <p>Nike</p>
-              </a>
-            </li>
-            <li>
-              <a href="index.php?idNameSP=Adidas&act=XemSP&page=1">
-                <div class="img-nav">
-                  <img src="images/Adidas.png" />
-                </div>
-                <p>Adidas</p>
-              </a>
-            </li>
-            <li>
-              <a href="index.php?idNameSP=Vans&act=XemSP&page=1">
-                <div class="img-nav">
-                  <img src="images/vans.png" />
-                </div>
-                <p>Vans</p>
-              </a>
-            </li>
-            <li>
-              <a href="index.php?idNameSP=Converse&act=XemSP&page=1">
-                <div class="img-nav">
-                  <img src="images/Converse.png" />
-                </div>
-                <p>Converse</p>
-              </a>
-            </li>
-            <li>
-              <a href="index.php?idNameSP=Balenciaga&act=XemSP&page=1">
-                <div class="img-nav">
-                  <img src="images/Balenciaga.png" />
-                </div>
-                <p>Balenciaga</p>
-              </a>
-            </li>
-            <li class="ic-cart">
-              <a class="icon-cart-a" href="index.php?act=cart">
-                <img class="icon-cart-img" src="images/cart2.png" />';
-              if(isset($_SESSION['giohang']))
-              echo '<p class="icon-cart-number">('.sizeof($_SESSION['giohang']).')</p>';
-              else
-              echo '<p class="icon-cart-number">(0)</p>';
-              echo'
-              </a>
-            </li>
-          </ul>
+            </div>
+            <div class="menu-nav">
+              <div class="navi-item">
+                <ul>
+                  <li>
+                    <a href="index.php?act=sale">
+                      <div class="img-nav">
+                        <img src="images/sale.png" />
+                      </div>
+                      <p>Siêu Sale</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.php?idNameSP=Nike&act=XemSP&page=1">
+                      <div class="img-nav">
+                        <img src="images/nike.png" />
+                      </div>
+                      <p>Nike</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.php?idNameSP=Adidas&act=XemSP&page=1">
+                      <div class="img-nav">
+                        <img src="images/Adidas.png" />
+                      </div>
+                      <p>Adidas</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.php?idNameSP=Vans&act=XemSP&page=1">
+                      <div class="img-nav">
+                        <img src="images/vans.png" />
+                      </div>
+                      <p>Vans</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.php?idNameSP=Converse&act=XemSP&page=1">
+                      <div class="img-nav">
+                        <img src="images/Converse.png" />
+                      </div>
+                      <p>Converse</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.php?idNameSP=Balenciaga&act=XemSP&page=1">
+                      <div class="img-nav">
+                        <img src="images/Balenciaga.png" />
+                      </div>
+                      <p>Balenciaga</p>
+                    </a>
+                  </li>
+                  <li class="ic-cart">
+                    <a class="icon-cart-a" href="index.php?act=cart">
+                      <img class="icon-cart-img" src="images/cart2.png" />';
+                    if(isset($_SESSION['giohang']))
+                    echo '<p class="icon-cart-number">('.sizeof($_SESSION['giohang']).')</p>';
+                    else
+                    echo '<p class="icon-cart-number">(0)</p>';
+                    echo'
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
         </div>
-        <div class="nav-search">
+      </div>
+      </div>
+    </div>
+      ';
+      echo '
+      <div class="nav-search">
           <form action="index.php?act=search" method="post" class="form-sr">
           <input type="hidden" name="page" value="1" />
             <input class="ip-search" name="query" placeholder="Bạn muốn tìm gì..." />
@@ -120,9 +129,5 @@ echo '<div class="home-tc">
             </div>
           </div>
         </div>
-      </div>
-      </div>
-      </div>
-    </div>
       ';
 ?>

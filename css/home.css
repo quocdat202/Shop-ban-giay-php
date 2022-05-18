@@ -22,6 +22,7 @@
 
 .center-page {
     display: flex;
+    flex-direction: column;
     width: 73%;
     margin: 0 auto;
     padding: 20px 0 0 0;
@@ -65,9 +66,9 @@
     color: #FC7FB2;
 }
 
-.center-pg {
+/* .center-pg {
     padding-bottom: 20px !important;
-}
+} */
 
 .gmail {
     margin: 13px 0 0 12px;
@@ -86,10 +87,18 @@
 
 .nav-search {
     display: flex;
+    padding-left: 31%;
+    padding-top: 10%;
+    padding-bottom: 1%;
+}
+
+.home-tc {
+    position: fixed;
+    z-index: 10;
 }
 
 .form-sr {
-    width: 60%;
+    width: 50%;
     display: flex;
     padding-left: 70px;
 }
@@ -740,6 +749,10 @@ body {
     background: #000;
     border-radius: 5px;
     letter-spacing: 2px;
+}
+
+.top-mn {
+    display: flex;
 }
 
 .empty-cart-div a:hover {
