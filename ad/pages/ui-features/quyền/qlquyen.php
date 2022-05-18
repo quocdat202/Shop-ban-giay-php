@@ -3,9 +3,9 @@
     
 
             echo'<div class="container">
-            <div class="row">
+            <div class="row title-table-row">
                 <div class="title">
-                    <p>Quản lý quyền</p>
+                    <p class="p-table-row" >Quản lý quyền</p>
                 </div>
             </div>
             <div class="row button">
