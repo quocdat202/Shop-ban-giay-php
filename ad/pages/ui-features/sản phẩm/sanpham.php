@@ -13,6 +13,9 @@ include_once '../GiaoDien/format_price.php';
                     <p class="p-table-row">Quản lý sản phẩm</p>
                 </div>
             </div>
+            <div class="addacc">
+              <a href="index.php?act=addproduct"class="btn btn-primary">Thêm sản phẩm</a>
+            </div>
             <div class="row table-sp">
             <table class="table table-striped">
             <thead>

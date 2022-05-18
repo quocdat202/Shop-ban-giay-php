@@ -20,6 +20,9 @@ include_once '../GiaoDien/format_price.php';
                     <p class="p-table-row">Quản lý tài khoản</p>
                 </div>
             </div>
+            <div class="addacc">
+              <a href="index.php?act=themtk"class="btn btn-primary">Thêm tài khoản</a>
+            </div>
             <div class="row table-sp">
             <table class="table table-striped">
             <thead>
