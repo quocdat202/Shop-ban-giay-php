@@ -1,5 +1,6 @@
 <?php
     include_once 'DataProvider.php';
+    include_once 'GiaoDien/format_price.php';
     $sql = "SELECT * FROM donhang WHERE idKH =".$_SESSION['iduser'];
     $result = DataProvider::executeQuery($sql);
     echo
@@ -26,7 +27,7 @@
                     <td>'.$row['ngaydathang'].'</td>
                     <td>'.$row['tennguoinhan'].'</td>
                     <td>'.$row['diachigiaohang'].'</td>
-                    <td>'.$row['tongtien'].'</td>';
+                    <td>'.currency_format($row['tongtien']).'</td>';
                     if($row['trangthai']==0)
                         echo'<td>Chưa xác nhận</td>';
                     else if($row['trangthai']==1)

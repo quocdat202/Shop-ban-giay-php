@@ -3,5 +3,5 @@
     unset($_SESSION['user']);
     unset($_SESSION['Quyen']);
     unset($_SESSION['checklogin']);
-    header('location:../index.php');
+    header('location:../../index.php');
 ?>

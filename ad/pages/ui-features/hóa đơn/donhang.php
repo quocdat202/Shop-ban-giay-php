@@ -75,7 +75,7 @@ include_once '../GiaoDien/format_price.php';
                 <td>'.$row['ngaydathang'].'</td>
                 <td>'.$row['tennguoinhan'].'</td>
                 <td>'.$row['diachigiaohang'].'</td>
-                <td>'.$row['tongtien'].'</td>';
+                <td>'.currency_format($row['tongtien']).'</td>';
                 if($row['trangthai']==0)
                     echo'<td>Chưa xác nhận</td>';
                 else if($row['trangthai']==1)
