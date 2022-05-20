@@ -1,12 +1,12 @@
 
 <?php
-include_once 'js/thongbao.js';
+
 
         if(isset($_GET['act']))
         {
             if($_GET['act']=="delete")
             {
-                ConfirmDelete();
+
                 include_once('../DataProvider.php');
                 $sql="Delete from sanpham where idSP = '".$_GET['id']."' ";
                 DataProvider::executeQuery2($sql);
