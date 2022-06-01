@@ -5,3 +5,4 @@ B2: Vào phpadmin tạo một database tên "shopgiay".<br>
 B3: Sau đó import file database "shopgiay.sql" từ trong Folder "csdl" vào database shopgiay mới tạo trong phpadmin.<br>
 B4: Chạy http://localhost/Shop-ban-giay-php/ trên trình duyệt.<br>
 </p>
+<h3>Tài khoản admin: tên đăng nhập: admin, mật khẩu: 123456</h3>
