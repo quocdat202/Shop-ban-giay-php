@@ -847,6 +847,15 @@ body {
     transition: 0.3s;
 }
 
+.disable {
+    pointer-events: none;
+    color: rgb(38, 38, 38);
+    background: rgb(197, 197, 197);
+}
+
+.checkloginbuy {
+    color: red;
+}
 
 
 

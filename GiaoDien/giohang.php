@@ -127,8 +127,13 @@ $showAddress="";
                             <h3 class="cart-notice1">
                                 MWC áp dụng đồng giá phí vận chuyển 20.000 VND cho toàn quốc . Bạn vui lòng KIỂM TRA email sau khi đặt hàng thành công và CHỜ NHẬN HÀNG.
                             </h3>
-                            <input type="hidden" name="total" value="'.$total.'" >
-                            <input type="submit" value="Hoàn tất đơn hàng" class="input-cart-DH" >
+                            <input type="hidden" name="total" value="'.$total.'" >';
+                            if(isset($_SESSION['user']))
+                                echo '<input type="submit" value="Hoàn tất đơn hàng" class="input-cart-DH" >';
+                            else
+                                echo '<input type="submit" value="Hoàn tất đơn hàng" class="input-cart-DH disable" >
+                                        <p class="checkloginbuy">Bạn hãy đăng nhập để mua hàng</p>';
+                        echo'
                         </div>
                         
                     </div>
