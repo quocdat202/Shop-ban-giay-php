@@ -14,7 +14,6 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-	<link href='https://cdn.jsdelivr.net/gh/startinhit/font-awesome/css/all.css' rel='stylesheet'/>
 	<link type="text/css" rel="stylesheet" href="css/style1.css">
 	<link type="text/css" rel="stylesheet" href="css/home.css">
 	<!-- <link type="text/css" rel="stylesheet" href="css/footer.css"> -->
@@ -80,6 +79,7 @@
         
     </div>
 </body>
+
 <script>
     let mybutton = document.getElementById("myBtn");
     window.onscroll = function() {scrollFunction()};
@@ -92,13 +92,14 @@
     }
 
     function topFunction() {
-        // document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-        
     }
+    // w3.slideshow(".swiper-slide", 4000)
 </script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="store.js"></script>
 <script src="jquery-3.3.1.min.js"></script>
+<script src="store.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<!-- <script src="https://www.w3schools.com/lib/w3.js"></script> -->
+
 </html>
