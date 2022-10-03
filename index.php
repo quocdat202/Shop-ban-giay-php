@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-	
+	<link href='https://cdn.jsdelivr.net/gh/startinhit/font-awesome/css/all.css' rel='stylesheet'/>
 	<link type="text/css" rel="stylesheet" href="css/style1.css">
 	<link type="text/css" rel="stylesheet" href="css/home.css">
 	<!-- <link type="text/css" rel="stylesheet" href="css/footer.css"> -->
@@ -71,13 +71,32 @@
                     // echo $_SESSION['iduser'];
                     
             ?>
-            
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+                    <i class="fa fa-long-arrow-up"></i>
+            </button>
         </div>
 
 
         
     </div>
 </body>
+<script>
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        // document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        
+    }
+</script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="store.js"></script>
 <script src="jquery-3.3.1.min.js"></script>

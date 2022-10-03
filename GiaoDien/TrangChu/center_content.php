@@ -126,25 +126,27 @@ include_once 'GiaoDien/format_price.php';
 
         echo    '<div class="theloai-sanpham">
                     <div class="product-nike pro-it">
-                        <div class="title-theloai">
-                            <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
-                        </div>                  
-                        <div>
-                            <span>Sắp xếp theo:</span>
-                            <form action="index.php" method="GET">
-                                <input type="hidden" name="idNameSP" value="'.$_GET['idNameSP'].'">
-                                <input type="hidden" name="act" value="XemSP">
-                                <input type="hidden" name="page" value="1">
-                                <select onchange="this.form.submit()" name="sortpro" class="form-select" aria-label="Default select example">
-                                    <option selected>Tùy chọn</option>
-                                    <option value="ASC">Giá tăng dần</option>
-                                    <option value="DESC">Giá giảm dần</option>
-                                </select>
-                            </form>
+                        <div class="product-top-title">
+                            <div class="title-theloai">
+                                <p>'.strtoupper($rowTheLoai['tentheloai']).'</p>
+                            </div>                  
+                            <div>
+                                <span>Sắp xếp theo:</span>
+                                <form action="index.php" method="GET">
+                                    <input type="hidden" name="idNameSP" value="'.$_GET['idNameSP'].'">
+                                    <input type="hidden" name="act" value="XemSP">
+                                    <input type="hidden" name="page" value="1">
+                                    <select onchange="this.form.submit()" name="sortpro" class="form-select" aria-label="Default select example">
+                                        <option selected>Tùy chọn</option>
+                                        <option value="ASC">Giá tăng dần</option>
+                                        <option value="DESC">Giá giảm dần</option>
+                                    </select>
+                                </form>
                             </div>
-                        <div class="item-pro">';
-                        include_once $ProductUrl;
-        echo            '</div>
+                        </div>
+                    <div class="item-pro">';
+                    include_once $ProductUrl;
+        echo        '</div>
                     </div>
                 </div>';
 
